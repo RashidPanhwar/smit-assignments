@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Learning Hub - Home</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 20px;
+        line-height: 1.5;
+        font-size: 17px;
+        background: #f6f7fb;
+        color: #1f2d3d;
+      }
+      .container {
+        max-width: 100%;
+        background: #ffffff;
+        width: 100%;
+        padding: 18px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      }
+      h1 {
+        font-size: 2.2rem;
+        margin-top: 6px;
+      }
+      h2 {
+        font-size: 1.6rem;
+      }
+      h3 {
+        font-size: 1.25rem;
+      }
+      h4 {
+        margin: 0 0 6px 0;
+        font-size: 1.05rem;
+        color: #0f172a;
+      }
+      nav {
+        margin: 10px 0 12px 0;
+        padding: 10px;
+        background: #eef2ff;
+        border-radius: 6px;
+      }
+      nav a {
+        display: inline-block;
+        margin-right: 12px;
+        padding: 6px 10px;
+        border-radius: 4px;
+        background: #ffffff;
+        border: 1px solid #dbe2ff;
+        text-decoration: none;
+        color: #0f172a;
+      }
+      nav a:last-child {
+        margin-right: 0;
+      }
+      nav a:hover {
+        background: #dbe7ff;
+      }
+      hr {
+        border: none;
+        border-top: 1px solid #e5e7eb;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 14px 0;
+        border-radius: 8px;
+        border: 1px solid #e7e7e7;
+      }
+      .full-bleed-image {
+        width: calc(100% + 36px);
+        margin-left: -18px;
+        margin-right: -18px;
+        border-radius: 0;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #0f172a;
+      }
+      ul,
+      ol {
+        padding-left: 20px;
+      }
+      a {
+        color: #2563eb;
+      }
+      .btn {
+        display: inline-block;
+        padding: 10px 14px;
+        background: #2563eb;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 8px;
+        margin-right: 10px;
+        margin-top: 6px;
+      }
+      .btn.secondary {
+        background: #334155;
+      }
+      .btn:hover {
+        background: #1d4ed8;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 14px;
+        margin-top: 14px;
+      }
+      .card {
+        background: #f8fafc;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        padding: 14px;
+      }
+      footer {
+        margin-top: 18px;
+        font-size: 14px;
+        color: #64748b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>E-Learning Hub</h1>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="courses.html">Courses</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <hr />
+
+      <img
+        class="full-bleed-image"
+        src="https://loremflickr.com/900/320/education"
+        alt="Education related random image"
+        width="900"
+      />
+
+      <h2>Learn. Practice. Grow.</h2>
+      <p>
+        Welcome to <strong>E-Learning Hub</strong>—a simple website that helps
+        students explore courses, understand our mission, and contact us for
+        support.
+      </p>
+
+      <div>
+        <a class="btn" href="courses.html">Explore Courses</a>
+        <a class="btn secondary" href="contact.html">Contact Us</a>
+      </div>
+
+      <h3>Popular Courses</h3>
+      <ul>
+        <li>Web Development (HTML, CSS, JavaScript)</li>
+        <li>Data Science Basics</li>
+        <li>Python for Beginners</li>
+        <li>Cyber Security Fundamentals</li>
+      </ul>
+
+      <h3>Why students choose us</h3>
+      <ul>
+        <li>Clear course structure</li>
+        <li>Practice-focused learning</li>
+        <li>Helpful resources and guidance</li>
+      </ul>
+
+      <h3>Featured Tracks</h3>
+      <div class="grid">
+        <div class="card">
+          <h4>Web Development</h4>
+          <p>Build real pages using HTML, CSS, and JavaScript fundamentals.</p>
+          <ul>
+            <li>Static websites</li>
+            <li>Responsive layouts</li>
+            <li>Basic interactivity</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>Data & Analytics</h4>
+          <p>Learn how data is cleaned, organized, and used for decisions.</p>
+          <ul>
+            <li>Data basics</li>
+            <li>Simple analysis</li>
+            <li>Practical projects</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>Cyber Security</h4>
+          <p>Start with secure learning habits and understand common threats.</p>
+          <ul>
+            <li>Security fundamentals</li>
+            <li>Safe practices</li>
+            <li>Beginner-friendly topics</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Student Testimonials</h3>
+      <div class="grid">
+        <div class="card">
+          <h4>Ayesha</h4>
+          <p>I finally understood HTML structure. The steps were easy to follow.</p>
+          <ul>
+            <li>Started from basics</li>
+            <li>Completed first mini project</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>Hamza</h4>
+          <p>The course flow made learning feel consistent and not confusing.</p>
+          <ul>
+            <li>Practice-focused lessons</li>
+            <li>Clear explanations</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>Fatima</h4>
+          <p>I learned how to plan my topics. Now I study step-by-step.</p>
+          <ul>
+            <li>Better learning routine</li>
+            <li>More confidence</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>First Week Plan</h3>
+      <ul>
+        <li>Day 1-2: HTML basics (headings, paragraphs, links)</li>
+        <li>Day 3-4: Lists + simple page layout</li>
+        <li>Day 5: CSS basics (colors, spacing, responsive basics)</li>
+        <li>Day 6-7: Mini project + review notes</li>
+      </ul>
+
+      <footer>© 2026 E-Learning Hub. All rights reserved.</footer>
+    </div>
+  </body>
+</html>
+

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Learning Hub - Contact</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 20px;
+        line-height: 1.5;
+        font-size: 17px;
+        background: #f6f7fb;
+        color: #1f2d3d;
+      }
+      .container {
+        max-width: 100%;
+        background: #ffffff;
+        width: 100%;
+        padding: 18px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      }
+      h1 {
+        font-size: 2.2rem;
+        margin-top: 6px;
+      }
+      h2 {
+        font-size: 1.6rem;
+      }
+      h3 {
+        font-size: 1.25rem;
+      }
+      h4 {
+        margin: 0 0 6px 0;
+        font-size: 1.05rem;
+        color: #0f172a;
+      }
+      nav {
+        margin: 10px 0 12px 0;
+        padding: 10px;
+        background: #eef2ff;
+        border-radius: 6px;
+      }
+      nav a {
+        display: inline-block;
+        margin-right: 12px;
+        padding: 6px 10px;
+        border-radius: 4px;
+        background: #ffffff;
+        border: 1px solid #dbe2ff;
+        text-decoration: none;
+        color: #0f172a;
+      }
+      nav a:last-child {
+        margin-right: 0;
+      }
+      nav a:hover {
+        background: #dbe7ff;
+      }
+      hr {
+        border: none;
+        border-top: 1px solid #e5e7eb;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 14px 0;
+        border-radius: 8px;
+        border: 1px solid #e7e7e7;
+      }
+      .full-bleed-image {
+        width: calc(100% + 36px);
+        margin-left: -18px;
+        margin-right: -18px;
+        border-radius: 0;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #0f172a;
+      }
+      ul,
+      ol {
+        padding-left: 20px;
+      }
+      a {
+        color: #2563eb;
+      }
+      form {
+        margin-top: 10px;
+        background: #f8fafc;
+        border: 1px solid #e5e7eb;
+        padding: 16px;
+        border-radius: 8px;
+      }
+      label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+      }
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 6px;
+        box-sizing: border-box;
+        border: 1px solid #cbd5e1;
+        border-radius: 6px;
+        background: #ffffff;
+      }
+      input:focus,
+      textarea:focus {
+        outline: none;
+        border-color: #2563eb;
+      }
+      button {
+        margin-top: 12px;
+        padding: 10px 14px;
+        cursor: pointer;
+        background: #2563eb;
+        color: #ffffff;
+        border: none;
+        border-radius: 6px;
+      }
+      button:hover {
+        background: #1d4ed8;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 14px;
+        margin-top: 14px;
+      }
+      .card {
+        background: #f8fafc;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        padding: 14px;
+      }
+      footer {
+        margin-top: 18px;
+        font-size: 14px;
+        color: #64748b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>E-Learning Hub</h1>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="courses.html">Courses</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <hr />
+
+      <h2>Contact</h2>
+      <img
+        class="full-bleed-image"
+        src="https://loremflickr.com/820/260/education"
+        alt="Education random image (contact page)"
+        width="820"
+      />
+
+      <p>
+        Have a question about courses? Send us a message using the form below.
+      </p>
+
+      <h3>Send a message</h3>
+      <form action="#" method="post">
+        <label for="name">Full Name</label>
+        <input id="name" type="text" name="name" placeholder="Your name" required />
+
+        <label for="email">Email</label>
+        <input
+          id="email"
+          type="email"
+          name="email"
+          placeholder="you@example.com"
+          required
+        />
+
+        <label for="topic">Topic</label>
+        <input id="topic" type="text" name="topic" placeholder="Course / Support / Other" />
+
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          placeholder="Write your message..."
+          required
+        ></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+      <h3>Direct contact</h3>
+      <ul>
+        <li>Email: <a href="mailto:support@elearninghub.com">support@elearninghub.com</a></li>
+        <li>Phone: <a href="tel:+10000000000">+1 000 000 0000</a></li>
+        <li>
+          Quick link:
+          <a href="courses.html">Browse courses</a>
+        </li>
+      </ul>
+
+      <div class="grid">
+        <div class="card">
+          <h4>Office Hours</h4>
+          <ul>
+            <li>Mon - Fri: 10:00 AM - 6:00 PM</li>
+            <li>Saturday: 10:00 AM - 2:00 PM</li>
+            <li>Sunday: Closed</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>FAQ</h4>
+          <ul>
+            <li>Course recommendations</li>
+            <li>Learning support & guidance</li>
+            <li>Suggestions and feedback</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h4>Our Location</h4>
+          <ul>
+            <li>Online classes (anywhere)</li>
+            <li>Support by email and messages</li>
+            <li>Updated course materials weekly</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>Follow Us</h4>
+          <ul>
+            <li><a href="#">Blog updates</a></li>
+            <li><a href="#">Learning tips</a></li>
+            <li><a href="#">Community news</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>What happens after you submit</h3>
+      <ol>
+        <li>We read your message and categorize your request.</li>
+        <li>We respond with guidance, resources, or next steps.</li>
+        <li>If needed, we suggest a suitable course path.</li>
+      </ol>
+
+      <h3>Newsletter (Optional)</h3>
+      <p>Weekly updates about new courses, tips, and learning challenges.</p>
+      <form action="#" method="post">
+        <label for="newsletter-email">Email</label>
+        <input
+          id="newsletter-email"
+          type="email"
+          name="newsletterEmail"
+          placeholder="you@example.com"
+          required
+        />
+        <button type="submit">Subscribe</button>
+      </form>
+
+      <footer>© 2026 E-Learning Hub. All rights reserved.</footer>
+    </div>
+  </body>
+</html>
+

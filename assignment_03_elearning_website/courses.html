@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Learning Hub - Courses</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 20px;
+        line-height: 1.5;
+        font-size: 17px;
+        background: #f6f7fb;
+        color: #1f2d3d;
+      }
+      .container {
+        max-width: 100%;
+        background: #ffffff;
+        width: 100%;
+        padding: 18px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      }
+      h1 {
+        font-size: 2.2rem;
+        margin-top: 6px;
+      }
+      h2 {
+        font-size: 1.6rem;
+      }
+      h3 {
+        font-size: 1.25rem;
+      }
+      h4 {
+        margin: 0 0 6px 0;
+        font-size: 1.05rem;
+        color: #0f172a;
+      }
+      nav {
+        margin: 10px 0 12px 0;
+        padding: 10px;
+        background: #eef2ff;
+        border-radius: 6px;
+      }
+      nav a {
+        display: inline-block;
+        margin-right: 12px;
+        padding: 6px 10px;
+        border-radius: 4px;
+        background: #ffffff;
+        border: 1px solid #dbe2ff;
+        text-decoration: none;
+        color: #0f172a;
+      }
+      nav a:last-child {
+        margin-right: 0;
+      }
+      nav a:hover {
+        background: #dbe7ff;
+      }
+      hr {
+        border: none;
+        border-top: 1px solid #e5e7eb;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 14px 0;
+        border-radius: 8px;
+        border: 1px solid #e7e7e7;
+      }
+      .full-bleed-image {
+        width: calc(100% + 36px);
+        margin-left: -18px;
+        margin-right: -18px;
+        border-radius: 0;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #0f172a;
+      }
+      ul,
+      ol {
+        padding-left: 20px;
+      }
+      a {
+        color: #2563eb;
+      }
+      .course-list {
+        margin-top: 10px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 14px;
+        margin-top: 14px;
+      }
+      .card {
+        background: #f8fafc;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        padding: 14px;
+      }
+      footer {
+        margin-top: 18px;
+        font-size: 14px;
+        color: #64748b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>E-Learning Hub</h1>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="courses.html">Courses</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <hr />
+
+      <h2>Courses</h2>
+      <img
+        class="full-bleed-image"
+        src="https://loremflickr.com/860/260/coding"
+        alt="Coding and courses random image"
+        width="860"
+      />
+
+      <p>
+        Choose a topic and start learning. Below is a detailed course catalog
+        so you can pick the right path confidently.
+      </p>
+
+      <h3>Course Catalog</h3>
+      <div class="grid">
+        <div class="card">
+          <h4>HTML Basics</h4>
+          <p><strong>Level:</strong> Beginner | <strong>Duration:</strong> 2 Weeks</p>
+          <p>Learn the structure of web pages and how to create clean content.</p>
+          <ul>
+            <li>Headings, paragraphs, and text formatting</li>
+            <li>Links and image embedding</li>
+            <li>Lists (ordered + unordered) and simple forms</li>
+          </ul>
+          <p><strong>Mini project:</strong> Personal profile page</p>
+          <p><a href="contact.html">Ask about HTML Basics</a></p>
+        </div>
+
+        <div class="card">
+          <h4>CSS for Beginners</h4>
+          <p><strong>Level:</strong> Beginner | <strong>Duration:</strong> 2 Weeks</p>
+          <p>Style your pages and learn spacing, typography, and responsive basics.</p>
+          <ul>
+            <li>Selectors and styling patterns</li>
+            <li>Box model: margin, padding, borders</li>
+            <li>Layouts and responsive design basics</li>
+          </ul>
+          <p><strong>Mini project:</strong> Simple landing page</p>
+          <p><a href="contact.html">Ask about CSS for Beginners</a></p>
+        </div>
+
+        <div class="card">
+          <h4>JavaScript Fundamentals</h4>
+          <p><strong>Level:</strong> Beginner | <strong>Duration:</strong> 3 Weeks</p>
+          <p>Make your website interactive using core JavaScript concepts.</p>
+          <ul>
+            <li>Variables, operators, and functions</li>
+            <li>DOM basics and event handling</li>
+            <li>Working with forms and user input</li>
+          </ul>
+          <p><strong>Mini project:</strong> Mini quiz or to-do list</p>
+          <p><a href="contact.html">Ask about JavaScript Fundamentals</a></p>
+        </div>
+
+        <div class="card">
+          <h4>Data Science Essentials</h4>
+          <p><strong>Level:</strong> Beginner | <strong>Duration:</strong> 3 Weeks</p>
+          <p>Understand how data is prepared and how simple insights are created.</p>
+          <ul>
+            <li>Data cleaning basics</li>
+            <li>Basic statistics and patterns</li>
+            <li>Simple visualization thinking</li>
+          </ul>
+          <p><strong>Mini project:</strong> Data insights summary report</p>
+          <p><a href="contact.html">Ask about Data Science Essentials</a></p>
+        </div>
+
+        <div class="card">
+          <h4>Cyber Security Starter</h4>
+          <p><strong>Level:</strong> Beginner | <strong>Duration:</strong> 2 Weeks</p>
+          <p>Learn safe practices and the basics of common threats.</p>
+          <ul>
+            <li>Threat fundamentals and security mindset</li>
+            <li>Passwords, MFA, and safe accounts</li>
+            <li>Phishing awareness and safe browsing</li>
+          </ul>
+          <p><strong>Mini project:</strong> Personal security checklist</p>
+          <p><a href="contact.html">Ask about Cyber Security Starter</a></p>
+        </div>
+      </div>
+
+      <h3>How it works</h3>
+      <ol>
+        <li>Select the course based on your goal</li>
+        <li>Read lessons with clear examples and headings</li>
+        <li>Practice using mini tasks and small projects</li>
+        <li>Review with quick checklists and notes</li>
+        <li>Ask questions if you get stuck (via <a href="contact.html">Contact</a>)</li>
+      </ol>
+
+      <h3>Course Outcomes</h3>
+      <div class="grid">
+        <div class="card">
+          <h4>Understand Core Concepts</h4>
+          <p>Know the "why" behind each topic, not just the "how".</p>
+        </div>
+        <div class="card">
+          <h4>Build Real Practice</h4>
+          <p>Create small projects that strengthen your confidence.</p>
+        </div>
+        <div class="card">
+          <h4>Stay Consistent</h4>
+          <p>Use structured steps so you can progress week-by-week.</p>
+        </div>
+      </div>
+
+      <p>
+        Want to ask about course recommendations?
+        <a href="contact.html">Contact us</a>.
+      </p>
+
+      <footer>© 2026 E-Learning Hub. All rights reserved.</footer>
+    </div>
+  </body>
+</html>
+
