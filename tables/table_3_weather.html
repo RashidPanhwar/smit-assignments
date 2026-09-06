@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Station</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: center;
+        padding: 40px;
+        background: #fff;
+      }
+
+      .wrapper {
+        text-align: center;
+      }
+
+      .wrapper h2 {
+        font-size: 1.6rem;
+        margin-bottom: 12px;
+        font-weight: bold;
+      }
+
+      table {
+        border-collapse: collapse;
+        font-size: 1.1rem;
+      }
+
+      th, td {
+        border: 3px solid #999;
+        padding: 12px 20px;
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      th {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h2>Weather Station</h2>
+      <table>
+        <thead>
+          <tr>
+            <th rowspan="2">Station</th>
+            <th colspan="2">Temperature</th>
+            <th rowspan="2">Humidity</th>
+            <th rowspan="2">Weather</th>
+          </tr>
+          <tr>
+            <th>Max</th>
+            <th>Min</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>USA</td>
+            <td>24</td>
+            <td>19</td>
+            <td>60%</td>
+            <td>cloudy</td>
+          </tr>
+          <tr>
+            <td>Germany</td>
+            <td>5</td>
+            <td>-1</td>
+            <td>70%</td>
+            <td>Rainy</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

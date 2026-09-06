@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Device Specifications</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: center;
+        padding: 40px;
+        background: #fff;
+      }
+
+      table {
+        border-collapse: collapse;
+        font-size: 1.1rem;
+      }
+
+      th, td {
+        border: 3px solid #999;
+        padding: 12px 18px;
+        vertical-align: middle;
+      }
+
+      .header-main {
+        background-color: #2ec4c4;
+        font-weight: bold;
+        text-align: center;
+        color: #000;
+      }
+
+      .header-nested {
+        background-color: #f5c842;
+        font-weight: bold;
+        text-align: center;
+        color: #000;
+        border: 2px solid #999;
+        padding: 8px 14px;
+      }
+
+      .nested-table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      .nested-table td {
+        border: 2px solid #999;
+        padding: 8px 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th class="header-main">Device</th>
+          <th class="header-main">Brand</th>
+          <th class="header-main">Specifications</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Smartphone</td>
+          <td>Apple</td>
+          <td>
+            <!-- Nested table for Smartphone specs -->
+            <table class="nested-table">
+              <tr>
+                <td class="header-nested">Model</td>
+                <td class="header-nested">Storage</td>
+              </tr>
+              <tr>
+                <td>iPhone 12 Pro</td>
+                <td>256GB</td>
+              </tr>
+              <tr>
+                <td>iPhone SE</td>
+                <td>128GB</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>Laptop</td>
+          <td>HP</td>
+          <td>15.6" Display</td>
+        </tr>
+        <tr>
+          <td>Tablet</td>
+          <td>Samsung</td>
+          <td>10.5" Display</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
