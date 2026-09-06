@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grill & Chill - Contact Us</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #1a1a1a;
+        background: #fff;
+      }
+
+      a { text-decoration: none; color: inherit; }
+      img { max-width: 100%; display: block; }
+
+      /* NAV */
+      header {
+        background: #1a1a1a;
+        padding: 0 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 68px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+      .logo { display: flex; align-items: center; gap: 10px; }
+      .logo-icon { font-size: 2rem; }
+      .logo-text { color: #ff6b35; font-size: 1.5rem; font-weight: bold; letter-spacing: 1px; }
+      .logo-text span { color: #fff; }
+      nav ul { list-style: none; display: flex; gap: 30px; }
+      nav ul li a { color: #ccc; font-size: 0.95rem; padding: 4px 0; border-bottom: 2px solid transparent; }
+      nav ul li a:hover, nav ul li a.active { color: #ff6b35; border-bottom-color: #ff6b35; }
+
+      /* PAGE BANNER */
+      .page-banner {
+        background: #1a1a1a;
+        color: #fff;
+        text-align: center;
+        padding: 50px 20px;
+      }
+      .page-banner h1 { font-size: 2.4rem; margin-bottom: 8px; }
+      .page-banner h1 span { color: #ff6b35; }
+      .page-banner p { color: #aaa; font-size: 1rem; }
+
+      /* CONTACT SECTION */
+      .contact-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        padding: 70px 60px;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      /* INFO SIDE */
+      .contact-info h2 {
+        font-size: 1.7rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .contact-info h2 span { color: #ff6b35; }
+
+      .contact-info p.sub {
+        color: #666;
+        font-size: 0.95rem;
+        margin-bottom: 30px;
+        line-height: 1.6;
+      }
+
+      .info-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        margin-bottom: 24px;
+      }
+
+      .info-item .info-icon {
+        font-size: 1.6rem;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+
+      .info-item h4 {
+        font-size: 0.9rem;
+        font-weight: bold;
+        color: #ff6b35;
+        margin-bottom: 4px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .info-item p {
+        font-size: 0.95rem;
+        color: #444;
+        line-height: 1.6;
+      }
+
+      /* SOCIAL */
+      .social-title {
+        font-size: 0.9rem;
+        font-weight: bold;
+        color: #ff6b35;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 12px;
+        margin-top: 10px;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 12px;
+      }
+
+      .social-links a {
+        display: inline-block;
+        padding: 8px 16px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 0.9rem;
+        color: #333;
+        background: #f9f9f9;
+        transition: background 0.2s, border-color 0.2s, color 0.2s;
+      }
+
+      .social-links a:hover {
+        background: #ff6b35;
+        border-color: #ff6b35;
+        color: #fff;
+      }
+
+      /* FORM SIDE */
+      .contact-form h2 {
+        font-size: 1.7rem;
+        font-weight: bold;
+        margin-bottom: 24px;
+      }
+      .contact-form h2 span { color: #ff6b35; }
+
+      .form-group {
+        margin-bottom: 18px;
+      }
+
+      .form-group label {
+        display: block;
+        font-size: 0.88rem;
+        font-weight: bold;
+        color: #444;
+        margin-bottom: 6px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+      }
+
+      .form-group input,
+      .form-group textarea,
+      .form-group select {
+        width: 100%;
+        padding: 10px 14px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 0.95rem;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #1a1a1a;
+        background: #fff;
+        transition: border-color 0.2s;
+      }
+
+      .form-group input:focus,
+      .form-group textarea:focus,
+      .form-group select:focus {
+        outline: none;
+        border-color: #ff6b35;
+      }
+
+      .form-group textarea {
+        height: 120px;
+        resize: vertical;
+      }
+
+      .btn-submit {
+        width: 100%;
+        padding: 12px;
+        background: #ff6b35;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        letter-spacing: 0.5px;
+      }
+
+      .btn-submit:hover {
+        background: #e85c28;
+      }
+
+      /* MAP PLACEHOLDER */
+      .map-section {
+        padding: 0 60px 60px;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      .map-section h3 {
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-bottom: 16px;
+      }
+      .map-section h3 span { color: #ff6b35; }
+
+      .map-placeholder {
+        width: 100%;
+        height: 260px;
+        background: #f0f0f0;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px dashed #ccc;
+        color: #999;
+        font-size: 1rem;
+        gap: 10px;
+      }
+
+      /* FOOTER */
+      footer {
+        background: #1a1a1a;
+        color: #aaa;
+        padding: 40px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+      }
+      footer h4 { color: #ff6b35; font-size: 1rem; margin-bottom: 14px; }
+      footer p, footer li { font-size: 0.88rem; line-height: 1.8; list-style: none; color: #aaa; }
+      footer a { color: #aaa; }
+      footer a:hover { color: #ff6b35; }
+      .footer-bottom {
+        background: #111; text-align: center;
+        padding: 14px; color: #555; font-size: 0.82rem;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 768px) {
+        .contact-wrapper { grid-template-columns: 1fr; padding: 40px 24px; }
+        .map-section { padding: 0 24px 40px; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- HEADER -->
+    <header>
+      <div class="logo">
+        <span class="logo-icon">🍔</span>
+        <span class="logo-text">Grill <span>&amp;</span> Chill</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html" class="active">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- PAGE BANNER -->
+    <div class="page-banner">
+      <h1>Contact <span>Us</span></h1>
+      <p>We'd love to hear from you — reach out anytime</p>
+    </div>
+
+    <!-- CONTACT SECTION -->
+    <div class="contact-wrapper">
+
+      <!-- LEFT: INFO -->
+      <div class="contact-info">
+        <h2>Get in <span>Touch</span></h2>
+        <p class="sub">
+          Have a question, feedback, or want to place a bulk order?
+          We're here to help. Drop by, call us, or send a message.
+        </p>
+
+        <div class="info-item">
+          <span class="info-icon">📍</span>
+          <div>
+            <h4>Address</h4>
+            <p>12 Food Street, Burns Road<br />Karachi, Pakistan</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span class="info-icon">📞</span>
+          <div>
+            <h4>Phone Number</h4>
+            <p>+92 300 1234567</p>
+            <p>+92 21 3456789 (Landline)</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span class="info-icon">✉️</span>
+          <div>
+            <h4>Email Address</h4>
+            <p>hello@grillandchill.pk</p>
+            <p>orders@grillandchill.pk</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span class="info-icon">🕐</span>
+          <div>
+            <h4>Opening Hours</h4>
+            <p>Mon – Fri: 11:00 AM – 11:00 PM</p>
+            <p>Sat – Sun: 10:00 AM – 12:00 AM</p>
+          </div>
+        </div>
+
+        <p class="social-title">Follow Us</p>
+        <div class="social-links">
+          <a href="#">📘 Facebook</a>
+          <a href="#">📸 Instagram</a>
+          <a href="#">🐦 Twitter</a>
+          <a href="#">▶️ YouTube</a>
+        </div>
+      </div>
+
+      <!-- RIGHT: FORM -->
+      <div class="contact-form">
+        <h2>Send a <span>Message</span></h2>
+        <form action="#" method="post">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="e.g. Ali Hassan" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+92 3XX XXXXXXX" />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject">
+              <option value="" disabled selected>Select a topic</option>
+              <option value="order">Order Inquiry</option>
+              <option value="feedback">Feedback</option>
+              <option value="bulk">Bulk / Catering Order</option>
+              <option value="complaint">Complaint</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Write your message here..."></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Send Message</button>
+        </form>
+      </div>
+
+    </div>
+
+    <!-- MAP PLACEHOLDER -->
+    <div class="map-section">
+      <h3>Find <span>Us</span></h3>
+      <div class="map-placeholder">
+        🗺️ &nbsp; Map — 12 Food Street, Burns Road, Karachi
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div>
+        <h4>🍔 Grill &amp; Chill</h4>
+        <p>Bringing bold flavors and good vibes to your table since 2018.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>📍 12 Food Street, Karachi</p>
+        <p>📞 +92 300 1234567</p>
+        <p>✉️ hello@grillandchill.pk</p>
+      </div>
+      <div>
+        <h4>Opening Hours</h4>
+        <p>Mon – Fri: 11am – 11pm</p>
+        <p>Sat – Sun: 10am – 12am</p>
+      </div>
+    </footer>
+    <div class="footer-bottom">
+      &copy; 2026 Grill &amp; Chill. All rights reserved.
+    </div>
+
+  </body>
+</html>

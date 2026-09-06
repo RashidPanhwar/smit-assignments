@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grill & Chill - Home</title>
+    <style>
+      /* ===== RESET & BASE ===== */
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #1a1a1a;
+        background: #fff;
+      }
+
+      a { text-decoration: none; color: inherit; }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      /* ===== HEADER / NAV ===== */
+      header {
+        background: #1a1a1a;
+        padding: 0 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 68px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .logo-icon {
+        font-size: 2rem;
+      }
+
+      .logo-text {
+        color: #ff6b35;
+        font-size: 1.5rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+
+      .logo-text span {
+        color: #fff;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+      }
+
+      nav ul li a {
+        color: #ccc;
+        font-size: 0.95rem;
+        letter-spacing: 0.5px;
+        padding: 4px 0;
+        border-bottom: 2px solid transparent;
+        transition: color 0.2s, border-color 0.2s;
+      }
+
+      nav ul li a:hover,
+      nav ul li a.active {
+        color: #ff6b35;
+        border-bottom-color: #ff6b35;
+      }
+
+      /* ===== HERO ===== */
+      .hero {
+        position: relative;
+        height: 520px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+      }
+
+      .hero img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        filter: brightness(0.5);
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        padding: 0 60px;
+        color: #fff;
+        max-width: 600px;
+      }
+
+      .hero-content h1 {
+        font-size: 2.8rem;
+        font-weight: bold;
+        line-height: 1.2;
+        margin-bottom: 16px;
+      }
+
+      .hero-content h1 span {
+        color: #ff6b35;
+      }
+
+      .hero-content p {
+        font-size: 1.1rem;
+        color: #e0e0e0;
+        margin-bottom: 28px;
+        line-height: 1.6;
+      }
+
+      .btn-primary {
+        display: inline-block;
+        padding: 12px 30px;
+        background: #ff6b35;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: bold;
+        border-radius: 4px;
+      }
+
+      .btn-primary:hover {
+        background: #e85c28;
+      }
+
+      /* ===== SECTION COMMON ===== */
+      section {
+        padding: 60px 40px;
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: #1a1a1a;
+      }
+
+      .section-sub {
+        text-align: center;
+        color: #666;
+        margin-bottom: 40px;
+        font-size: 1rem;
+      }
+
+      .divider {
+        width: 60px;
+        height: 4px;
+        background: #ff6b35;
+        margin: 10px auto 36px;
+        border-radius: 2px;
+      }
+
+      /* ===== FEATURED FOODS ===== */
+      .featured-bg {
+        background: #f9f4f0;
+      }
+
+      .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 28px;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      .food-card {
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+
+      .food-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.13);
+      }
+
+      .food-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .food-card-body {
+        padding: 18px;
+      }
+
+      .food-card-body h3 {
+        font-size: 1.15rem;
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: #1a1a1a;
+      }
+
+      .food-card-body p {
+        font-size: 0.9rem;
+        color: #666;
+        line-height: 1.5;
+        margin-bottom: 14px;
+      }
+
+      .food-card-body .price {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #ff6b35;
+      }
+
+      /* ===== SPECIAL OFFER ===== */
+      .offer-section {
+        background: #ff6b35;
+        color: #fff;
+        text-align: center;
+        padding: 60px 40px;
+      }
+
+      .offer-section h2 {
+        font-size: 2.2rem;
+        font-weight: bold;
+        margin-bottom: 14px;
+      }
+
+      .offer-section p {
+        font-size: 1.1rem;
+        margin-bottom: 28px;
+        opacity: 0.92;
+      }
+
+      .offer-badge {
+        display: inline-block;
+        background: #fff;
+        color: #ff6b35;
+        font-size: 1.6rem;
+        font-weight: bold;
+        padding: 10px 30px;
+        border-radius: 50px;
+        margin-bottom: 28px;
+      }
+
+      .btn-outline-white {
+        display: inline-block;
+        padding: 12px 30px;
+        border: 2px solid #fff;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: bold;
+        border-radius: 4px;
+      }
+
+      .btn-outline-white:hover {
+        background: #fff;
+        color: #ff6b35;
+      }
+
+      /* ===== FOOTER ===== */
+      footer {
+        background: #1a1a1a;
+        color: #aaa;
+        padding: 40px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+      }
+
+      footer h4 {
+        color: #ff6b35;
+        font-size: 1rem;
+        margin-bottom: 14px;
+        letter-spacing: 0.5px;
+      }
+
+      footer p, footer li {
+        font-size: 0.88rem;
+        line-height: 1.8;
+        list-style: none;
+        color: #aaa;
+      }
+
+      footer a {
+        color: #aaa;
+      }
+
+      footer a:hover {
+        color: #ff6b35;
+      }
+
+      .footer-bottom {
+        background: #111;
+        text-align: center;
+        padding: 14px;
+        color: #555;
+        font-size: 0.82rem;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- HEADER -->
+    <header>
+      <div class="logo">
+        <span class="logo-icon">🍔</span>
+        <span class="logo-text">Grill <span>&amp;</span> Chill</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <img src="images/hero.jpg" alt="Delicious food spread" />
+      <div class="hero-content">
+        <h1>Taste the <span>Passion</span> in Every Bite</h1>
+        <p>
+          Fresh ingredients, bold flavors, and recipes crafted with love.
+          Come hungry, leave happy — every single time.
+        </p>
+        <a href="menu.html" class="btn-primary">Explore Our Menu</a>
+      </div>
+    </section>
+
+    <!-- FEATURED FOODS -->
+    <section class="featured-bg">
+      <h2 class="section-title">Featured Foods</h2>
+      <p class="section-sub">Hand-picked favorites our customers love most</p>
+      <div class="divider"></div>
+
+      <div class="cards-grid">
+
+        <div class="food-card">
+          <img src="images/burger.jfif" alt="Classic Beef Burger" />
+          <div class="food-card-body">
+            <h3>Classic Beef Burger</h3>
+            <p>Juicy beef patty, fresh lettuce, tomatoes, and our secret sauce stacked in a toasted bun.</p>
+            <span class="price">Rs. 650</span>
+          </div>
+        </div>
+
+        <div class="food-card">
+          <img src="images/pizza.jpg" alt="Margherita Pizza" />
+          <div class="food-card-body">
+            <h3>Margherita Pizza</h3>
+            <p>Crispy thin crust topped with rich tomato sauce, fresh mozzarella, and basil leaves.</p>
+            <span class="price">Rs. 900</span>
+          </div>
+        </div>
+
+        <div class="food-card">
+          <img src="images/bbq.jfif" alt="BBQ Ribs Platter" />
+          <div class="food-card-body">
+            <h3>BBQ Ribs Platter</h3>
+            <p>Slow-cooked pork ribs glazed with smoky BBQ sauce, served with coleslaw and fries.</p>
+            <span class="price">Rs. 1,400</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SPECIAL OFFER -->
+    <section class="offer-section">
+      <h2>Today's Special Deal 🎉</h2>
+      <p>Order any combo meal and get a free drink with your order!</p>
+      <div class="offer-badge">20% OFF — This Weekend Only</div>
+      <br />
+      <a href="menu.html" class="btn-outline-white">Order Now</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div>
+        <h4>🍔 Grill &amp; Chill</h4>
+        <p>Bringing bold flavors and good vibes to your table since 2018. Visit us or order online anytime.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>📍 12 Food Street, Karachi</p>
+        <p>📞 +92 300 1234567</p>
+        <p>✉️ hello@grillandchill.pk</p>
+      </div>
+      <div>
+        <h4>Opening Hours</h4>
+        <p>Mon – Fri: 11am – 11pm</p>
+        <p>Sat – Sun: 10am – 12am</p>
+      </div>
+    </footer>
+    <div class="footer-bottom">
+      &copy; 2026 Grill &amp; Chill. All rights reserved.
+    </div>
+
+  </body>
+</html>

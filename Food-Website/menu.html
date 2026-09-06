@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grill & Chill - Menu</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #1a1a1a;
+        background: #fff;
+      }
+
+      a { text-decoration: none; color: inherit; }
+      img { max-width: 100%; display: block; }
+
+      /* NAV */
+      header {
+        background: #1a1a1a;
+        padding: 0 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 68px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .logo { display: flex; align-items: center; gap: 10px; }
+      .logo-icon { font-size: 2rem; }
+      .logo-text { color: #ff6b35; font-size: 1.5rem; font-weight: bold; letter-spacing: 1px; }
+      .logo-text span { color: #fff; }
+
+      nav ul { list-style: none; display: flex; gap: 30px; }
+      nav ul li a {
+        color: #ccc; font-size: 0.95rem; padding: 4px 0;
+        border-bottom: 2px solid transparent;
+      }
+      nav ul li a:hover, nav ul li a.active {
+        color: #ff6b35; border-bottom-color: #ff6b35;
+      }
+
+      /* PAGE BANNER */
+      .page-banner {
+        background: #1a1a1a;
+        color: #fff;
+        text-align: center;
+        padding: 50px 20px;
+      }
+      .page-banner h1 { font-size: 2.4rem; margin-bottom: 8px; }
+      .page-banner h1 span { color: #ff6b35; }
+      .page-banner p { color: #aaa; font-size: 1rem; }
+
+      /* MENU SECTION */
+      .menu-section { padding: 60px 40px; max-width: 1200px; margin: 0 auto; }
+
+      .section-title {
+        font-size: 1.7rem;
+        font-weight: bold;
+        margin-bottom: 6px;
+        color: #1a1a1a;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .divider {
+        width: 50px;
+        height: 4px;
+        background: #ff6b35;
+        border-radius: 2px;
+        margin-bottom: 28px;
+      }
+
+      .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 24px;
+        margin-bottom: 60px;
+      }
+
+      .menu-card {
+        border: 1px solid #eee;
+        border-radius: 10px;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+
+      .menu-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+      }
+
+      .menu-card img {
+        width: 100%;
+        height: 185px;
+        object-fit: cover;
+      }
+
+      .menu-card-body { padding: 16px; }
+
+      .menu-card-body h3 {
+        font-size: 1.05rem;
+        font-weight: bold;
+        margin-bottom: 6px;
+      }
+
+      .menu-card-body p {
+        font-size: 0.85rem;
+        color: #666;
+        line-height: 1.5;
+        margin-bottom: 12px;
+      }
+
+      .price-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .price-row .price {
+        color: #ff6b35;
+        font-weight: bold;
+        font-size: 1.05rem;
+      }
+
+      .tag {
+        font-size: 0.75rem;
+        background: #fff4ef;
+        color: #ff6b35;
+        padding: 3px 8px;
+        border-radius: 20px;
+        border: 1px solid #ffc5aa;
+      }
+
+      /* FOOTER */
+      footer {
+        background: #1a1a1a;
+        color: #aaa;
+        padding: 40px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+      }
+      footer h4 { color: #ff6b35; font-size: 1rem; margin-bottom: 14px; }
+      footer p, footer li { font-size: 0.88rem; line-height: 1.8; list-style: none; color: #aaa; }
+      footer a { color: #aaa; }
+      footer a:hover { color: #ff6b35; }
+      .footer-bottom {
+        background: #111; text-align: center;
+        padding: 14px; color: #555; font-size: 0.82rem;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- HEADER -->
+    <header>
+      <div class="logo">
+        <span class="logo-icon">🍔</span>
+        <span class="logo-text">Grill <span>&amp;</span> Chill</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html" class="active">Menu</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- PAGE BANNER -->
+    <div class="page-banner">
+      <h1>Our <span>Menu</span></h1>
+      <p>Fresh, flavorful, and made to order — explore what's cooking today</p>
+    </div>
+
+    <!-- MENU CONTENT -->
+    <div class="menu-section">
+
+      <!-- ===== BURGERS ===== -->
+      <h2 class="section-title">🍔 Burgers</h2>
+      <div class="divider"></div>
+      <div class="menu-grid">
+
+        <div class="menu-card">
+          <img src="images/burger.jfif" alt="Classic Beef Burger" />
+          <div class="menu-card-body">
+            <h3>Classic Beef Burger</h3>
+            <p>Juicy beef patty with lettuce, tomato, and our signature sauce in a toasted bun.</p>
+            <div class="price-row"><span class="price">Rs. 650</span><span class="tag">Bestseller</span></div>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="images/sandwich.jpeg" alt="Crispy Chicken Burger" />
+          <div class="menu-card-body">
+            <h3>Crispy Chicken Burger</h3>
+            <p>Golden fried chicken breast with coleslaw and garlic mayo sauce.</p>
+            <div class="price-row"><span class="price">Rs. 580</span></div>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="images/burger.jfif" alt="Double Smash Burger" />
+          <div class="menu-card-body">
+            <h3>Double Smash Burger</h3>
+            <p>Two smashed beef patties, American cheese, pickles, and caramelized onions.</p>
+            <div class="price-row"><span class="price">Rs. 850</span><span class="tag">New</span></div>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="images/sandwich.jpeg" alt="Zinger Burger" />
+          <div class="menu-card-body">
+            <h3>Zinger Burger</h3>
+            <p>Extra spicy fried chicken fillet with jalapenos, cheese, and chipotle mayo.</p>
+            <div class="price-row"><span class="price">Rs. 620</span><span class="tag">Spicy</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ===== PIZZA ===== -->
+      <h2 class="section-title">🍕 Pizza</h2>
+      <div class="divider"></div>
+      <div class="menu-grid">
+
+        <div class="menu-card">
+          <img src="images/pizza.jpg" alt="Margherita Pizza" />
+          <div class="menu-card-body">
+            <h3>Margherita Pizza</h3>
+            <p>Classic tomato base with fresh mozzarella, basil, and a drizzle of olive oil.</p>
+            <div class="price-row"><span class="price">Rs. 900</span></div>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="images/pasta.jfif" alt="BBQ Chicken Pizza" />
+          <div class="menu-card-body">
+            <h3>BBQ Chicken Pizza</h3>
+            <p>Smoky BBQ sauce, grilled chicken, red onions, and melted cheddar.</p>
+            <div class="price-row"><span class="price">Rs. 1,050</span><span class="tag">Spicy</span></div>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="images/pizza.jpg" alt="Pepperoni Pizza" />
+          <div class="menu-card-body">
+            <h3>Pepperoni Pizza</h3>
+            <p>Loaded with premium pepperoni slices, mozzarella, and spicy tomato sauce.</p>
+            <div class="price-row"><span class="price">Rs. 1,100</span><span class="tag">Bestseller</span></div>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="images/pasta.jfif" alt="Veggie Supreme Pizza" />
+          <div class="menu-card-body">
+            <h3>Veggie Supreme Pizza</h3>
+            <p>Bell peppers, mushrooms, olives, onions, and sweet corn on a herbed base.</p>
+            <div class="price-row"><span class="price">Rs. 850</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ===== BBQ ===== -->
+      <h2 class="section-title">🥩 BBQ</h2>
+      <div class="divider"></div>
+      <div class="menu-grid">
+
+        <div class="menu-card">
+          <img src="images/bbq.jfif" alt="BBQ Ribs Platter" />
+          <div class="menu-card-body">
+            <h3>BBQ Ribs Platter</h3>
+            <p>Slow-cooked pork ribs glazed with smoky BBQ sauce, served with fries and coleslaw.</p>
+            <div class="price-row"><span class="price">Rs. 1,400</span><span class="tag">Chef's Pick</span></div>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="images/fries.jfif" alt="BBQ Wings" />
+          <div class="menu-card-body">
+            <h3>BBQ Wings (6 pcs)</h3>
+            <p>Crispy chicken wings tossed in tangy BBQ glaze, served with ranch dip.</p>
+            <div class="price-row"><span class="price">Rs. 750</span></div>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="images/bbq.jfif" alt="Grilled Chicken Platter" />
+          <div class="menu-card-body">
+            <h3>Grilled Chicken Platter</h3>
+            <p>Marinated half chicken grilled over charcoal, served with garlic bread and salad.</p>
+            <div class="price-row"><span class="price">Rs. 1,200</span><span class="tag">New</span></div>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="images/fries.jfif" alt="BBQ Beef Skewers" />
+          <div class="menu-card-body">
+            <h3>BBQ Beef Skewers</h3>
+            <p>Tender beef cubes marinated and grilled on skewers with peppers and onions.</p>
+            <div class="price-row"><span class="price">Rs. 980</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ===== FAST FOOD ===== -->
+      <h2 class="section-title">🍟 Fast Food</h2>
+      <div class="divider"></div>
+      <div class="menu-grid">
+
+        <div class="menu-card">
+          <img src="images/fries.jfif" alt="Loaded Cheese Fries" />
+          <div class="menu-card-body">
+            <h3>Loaded Cheese Fries</h3>
+            <p>Crispy fries smothered in cheddar cheese sauce and jalapeños.</p>
+            <div class="price-row"><span class="price">Rs. 400</span></div>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="images/sandwich.jpeg" alt="Club Sandwich" />
+          <div class="menu-card-body">
+            <h3>Club Sandwich</h3>
+            <p>Triple-decker with grilled chicken, egg, cheese, lettuce, and tomato.</p>
+            <div class="price-row"><span class="price">Rs. 520</span></div>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="images/fries.jfif" alt="Onion Rings" />
+          <div class="menu-card-body">
+            <h3>Crispy Onion Rings</h3>
+            <p>Beer-battered onion rings fried golden and served with chipotle dipping sauce.</p>
+            <div class="price-row"><span class="price">Rs. 320</span></div>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="images/sandwich.jpeg" alt="Chicken Wrap" />
+          <div class="menu-card-body">
+            <h3>Chicken Tikka Wrap</h3>
+            <p>Spicy chicken tikka, fresh veggies, and mint chutney rolled in a soft tortilla.</p>
+            <div class="price-row"><span class="price">Rs. 480</span><span class="tag">Spicy</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ===== DESSERTS ===== -->
+      <h2 class="section-title">🍨 Desserts</h2>
+      <div class="divider"></div>
+      <div class="menu-grid">
+
+        <div class="menu-card">
+          <img src="images/icecream.jpg" alt="Ice Cream Sundae" />
+          <div class="menu-card-body">
+            <h3>Ice Cream Sundae</h3>
+            <p>Three scoops of ice cream with chocolate sauce, crushed nuts, and a cherry on top.</p>
+            <div class="price-row"><span class="price">Rs. 350</span></div>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="images/icecream.jpg" alt="Chocolate Lava Cake" />
+          <div class="menu-card-body">
+            <h3>Chocolate Lava Cake</h3>
+            <p>Warm chocolate cake with a gooey molten center, served with a scoop of vanilla.</p>
+            <div class="price-row"><span class="price">Rs. 420</span><span class="tag">Chef's Pick</span></div>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="images/icecream.jpg" alt="Nutella Waffle" />
+          <div class="menu-card-body">
+            <h3>Nutella Waffle</h3>
+            <p>Crispy Belgian waffle loaded with Nutella, banana slices, and whipped cream.</p>
+            <div class="price-row"><span class="price">Rs. 380</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ===== DRINKS ===== -->
+      <h2 class="section-title">🥤 Drinks</h2>
+      <div class="divider"></div>
+      <div class="menu-grid">
+
+        <div class="menu-card">
+          <img src="images/juice.jpg" alt="Fresh Orange Juice" />
+          <div class="menu-card-body">
+            <h3>Fresh Orange Juice</h3>
+            <p>Cold-pressed seasonal orange juice, no added sugar or preservatives.</p>
+            <div class="price-row"><span class="price">Rs. 280</span></div>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="images/juice.jpg" alt="Mango Smoothie" />
+          <div class="menu-card-body">
+            <h3>Mango Smoothie</h3>
+            <p>Thick and creamy blend of fresh Chaunsa mangoes with chilled milk.</p>
+            <div class="price-row"><span class="price">Rs. 320</span><span class="tag">Seasonal</span></div>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="images/juice.jpg" alt="Mint Lemonade" />
+          <div class="menu-card-body">
+            <h3>Mint Lemonade</h3>
+            <p>Refreshing chilled lemonade with fresh mint leaves and a hint of rock salt.</p>
+            <div class="price-row"><span class="price">Rs. 250</span></div>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="images/juice.jpg" alt="Cold Coffee" />
+          <div class="menu-card-body">
+            <h3>Cold Coffee</h3>
+            <p>Rich blended cold coffee with ice cream, topped with chocolate drizzle.</p>
+            <div class="price-row"><span class="price">Rs. 360</span><span class="tag">Bestseller</span></div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div>
+        <h4>🍔 Grill &amp; Chill</h4>
+        <p>Bringing bold flavors and good vibes to your table since 2018.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>📍 12 Food Street, Karachi</p>
+        <p>📞 +92 300 1234567</p>
+        <p>✉️ hello@grillandchill.pk</p>
+      </div>
+      <div>
+        <h4>Opening Hours</h4>
+        <p>Mon – Fri: 11am – 11pm</p>
+        <p>Sat – Sun: 10am – 12am</p>
+      </div>
+    </footer>
+    <div class="footer-bottom">
+      &copy; 2026 Grill &amp; Chill. All rights reserved.
+    </div>
+
+  </body>
+</html>
