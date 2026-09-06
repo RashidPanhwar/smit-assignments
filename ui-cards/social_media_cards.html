@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Media Cards</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 40px 20px;
+      }
+
+      .cards-wrapper {
+        display: flex;
+        gap: 24px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      /* ---- BASE CARD ---- */
+      .card {
+        width: 220px;
+        border: 2px solid #1a1a1a;
+        border-radius: 6px;
+        padding: 36px 24px 28px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background: #fff;
+        color: #1a1a1a;
+      }
+
+      /* ---- INSTAGRAM (highlighted) ---- */
+      .card.instagram {
+        background: #e1306c;
+        border-color: #e1306c;
+        color: #fff;
+      }
+
+      /* ---- ICON ---- */
+      .card .icon {
+        font-size: 2.8rem;
+        margin-bottom: 16px;
+        line-height: 1;
+      }
+
+      /* ---- TITLE ---- */
+      .card h2 {
+        font-size: 1.05rem;
+        font-weight: 900;
+        letter-spacing: 1.5px;
+        margin-bottom: 18px;
+        text-transform: uppercase;
+      }
+
+      /* ---- DESCRIPTION ---- */
+      .card p {
+        font-size: 0.82rem;
+        line-height: 1.65;
+        margin-bottom: 28px;
+        flex: 1;
+      }
+
+      /* ---- BUTTON (dark) ---- */
+      .btn {
+        display: inline-block;
+        width: 100%;
+        padding: 12px 0;
+        border-radius: 50px;
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        cursor: pointer;
+        text-decoration: none;
+        transition: opacity 0.2s;
+      }
+
+      .btn-dark {
+        background: #1a1a1a;
+        color: #fff;
+        border: 2px solid #1a1a1a;
+      }
+
+      /* ---- BUTTON (light — used on Instagram card) ---- */
+      .btn-light {
+        background: #fff;
+        color: #e1306c;
+        border: 2px solid #fff;
+      }
+
+      .btn:hover {
+        opacity: 0.85;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="cards-wrapper">
+
+      <!-- TWITTER -->
+      <div class="card">
+        <div class="icon">🐦</div>
+        <h2>Twitter</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Expedita ullam aliquid non eligendi, nemo est neque
+          reiciendis error?
+        </p>
+        <a href="#" class="btn btn-dark">Read More</a>
+      </div>
+
+      <!-- INSTAGRAM (highlighted) -->
+      <div class="card instagram">
+        <div class="icon">📸</div>
+        <h2>Instagram</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Expedita ullam aliquid non eligendi, nemo est neque
+          reiciendis error?
+        </p>
+        <a href="#" class="btn btn-light">Read More</a>
+      </div>
+
+      <!-- YOUTUBE -->
+      <div class="card">
+        <div class="icon">▶️</div>
+        <h2>YouTube</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Expedita ullam aliquid non eligendi, nemo est neque
+          reiciendis error?
+        </p>
+        <a href="#" class="btn btn-dark">Read More</a>
+      </div>
+
+    </div>
+
+  </body>
+</html>
