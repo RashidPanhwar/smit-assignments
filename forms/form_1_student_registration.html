@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Registration Form</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f5c6c6;
+        display: flex;
+        justify-content: center;
+        padding: 40px 20px;
+        margin: 0;
+      }
+
+      .form-container {
+        width: 100%;
+        max-width: 600px;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-bottom: 28px;
+        color: #000;
+      }
+
+      .form-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+        gap: 10px;
+      }
+
+      .form-row label {
+        width: 140px;
+        min-width: 140px;
+        font-size: 1rem;
+        color: #000;
+      }
+
+      .form-row input[type="text"],
+      .form-row input[type="email"],
+      .form-row input[type="password"],
+      .form-row input[type="tel"] {
+        flex: 1;
+        padding: 6px 8px;
+        font-size: 0.95rem;
+        border: 1px solid #bbb;
+        background: #fff;
+        box-sizing: border-box;
+      }
+
+      .name-group {
+        display: flex;
+        flex: 1;
+        gap: 6px;
+        align-items: center;
+      }
+
+      .name-group input {
+        flex: 1;
+        padding: 6px 8px;
+        font-size: 0.95rem;
+        border: 1px solid #bbb;
+        background: #fff;
+      }
+
+      .name-sep {
+        font-size: 1rem;
+        color: #444;
+      }
+
+      .dob-group {
+        display: flex;
+        flex: 1;
+        gap: 6px;
+        align-items: center;
+      }
+
+      .dob-group input {
+        width: 70px;
+        padding: 6px 8px;
+        font-size: 0.95rem;
+        border: 1px solid #bbb;
+        background: #fff;
+      }
+
+      .dob-sep {
+        font-size: 1rem;
+        color: #444;
+      }
+
+      .dob-hint {
+        font-style: italic;
+        font-size: 0.9rem;
+        color: #444;
+        margin-left: 4px;
+      }
+
+      .mobile-group {
+        display: flex;
+        flex: 1;
+        gap: 6px;
+        align-items: center;
+      }
+
+      .mobile-group .country-code {
+        width: 48px;
+        padding: 6px 8px;
+        font-size: 0.95rem;
+        border: 1px solid #bbb;
+        background: #fff;
+        text-align: center;
+      }
+
+      .mobile-group .mobile-sep {
+        font-size: 1rem;
+        color: #444;
+      }
+
+      .mobile-group input[type="tel"] {
+        flex: 1;
+        padding: 6px 8px;
+        font-size: 0.95rem;
+        border: 1px solid #bbb;
+        background: #fff;
+      }
+
+      .radio-group,
+      .checkbox-group {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        flex: 1;
+      }
+
+      .radio-group label,
+      .checkbox-group label {
+        width: auto;
+        min-width: unset;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        color: #000;
+      }
+
+      select {
+        flex: 1;
+        padding: 6px 8px;
+        font-size: 0.95rem;
+        border: 1px solid #bbb;
+        background: #fff;
+      }
+
+      input[type="file"] {
+        flex: 1;
+        font-size: 0.9rem;
+      }
+
+      textarea {
+        flex: 1;
+        padding: 8px;
+        font-size: 0.95rem;
+        border: 1px solid #bbb;
+        background: #fff;
+        height: 90px;
+        resize: vertical;
+        box-sizing: border-box;
+      }
+
+      .form-row.textarea-row {
+        align-items: flex-start;
+      }
+
+      .submit-row {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .submit-row button {
+        padding: 6px 24px;
+        font-size: 0.95rem;
+        background: #e8e8e8;
+        border: 1px solid #aaa;
+        cursor: pointer;
+      }
+
+      .submit-row button:hover {
+        background: #d0d0d0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h1>Student Registration Form</h1>
+
+      <form action="#" method="post">
+
+        <!-- Roll No -->
+        <div class="form-row">
+          <label for="roll">Roll no. :</label>
+          <input type="text" id="roll" name="roll" />
+        </div>
+
+        <!-- Student Name -->
+        <div class="form-row">
+          <label>Student name :</label>
+          <div class="name-group">
+            <input type="text" name="first_name" placeholder="First Name" />
+            <span class="name-sep">-</span>
+            <input type="text" name="last_name" placeholder="Last Name" />
+          </div>
+        </div>
+
+        <!-- Father's Name -->
+        <div class="form-row">
+          <label for="father">Father's name :</label>
+          <input type="text" id="father" name="father" />
+        </div>
+
+        <!-- Date of Birth -->
+        <div class="form-row">
+          <label>Date of birth :</label>
+          <div class="dob-group">
+            <input type="text" name="dob_day" placeholder="Day" />
+            <span class="dob-sep">-</span>
+            <input type="text" name="dob_month" placeholder="Month" />
+            <span class="dob-sep">-</span>
+            <input type="text" name="dob_year" placeholder="Year" />
+            <span class="dob-hint">(DD-MM-YYYY)</span>
+          </div>
+        </div>
+
+        <!-- Mobile No -->
+        <div class="form-row">
+          <label>Mobile no. :</label>
+          <div class="mobile-group">
+            <input type="text" class="country-code" value="+91" readonly />
+            <span class="mobile-sep">-</span>
+            <input type="tel" name="mobile" />
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="form-row">
+          <label for="email">Email id :</label>
+          <input type="email" id="email" name="email" />
+        </div>
+
+        <!-- Password -->
+        <div class="form-row">
+          <label for="password">Password :</label>
+          <input type="password" id="password" name="password" />
+        </div>
+
+        <!-- Gender -->
+        <div class="form-row">
+          <label>Gender :</label>
+          <div class="radio-group">
+            <label><input type="radio" name="gender" value="male" /> Male</label>
+            <label><input type="radio" name="gender" value="female" /> Female</label>
+          </div>
+        </div>
+
+        <!-- Department -->
+        <div class="form-row">
+          <label>Department :</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="dept" value="CSE" /> CSE</label>
+            <label><input type="checkbox" name="dept" value="IT" /> IT</label>
+            <label><input type="checkbox" name="dept" value="ECE" /> ECE</label>
+            <label><input type="checkbox" name="dept" value="Civil" /> Civil</label>
+            <label><input type="checkbox" name="dept" value="Mech" /> Mech</label>
+          </div>
+        </div>
+
+        <!-- Course -->
+        <div class="form-row">
+          <label for="course">Course :</label>
+          <select id="course" name="course">
+            <option value="" disabled selected>----------------------- Select Current Course's -----------------------</option>
+            <option value="web">Web Development</option>
+            <option value="ds">Data Science</option>
+            <option value="ai">Artificial Intelligence</option>
+            <option value="cyber">Cyber Security</option>
+          </select>
+        </div>
+
+        <!-- Student Photo -->
+        <div class="form-row">
+          <label for="photo">Student photo :</label>
+          <input type="file" id="photo" name="photo" accept="image/*" />
+        </div>
+
+        <!-- City -->
+        <div class="form-row">
+          <label for="city">City :</label>
+          <input type="text" id="city" name="city" />
+        </div>
+
+        <!-- Address -->
+        <div class="form-row textarea-row">
+          <label for="address">Address :</label>
+          <textarea id="address" name="address"></textarea>
+        </div>
+
+        <!-- Submit -->
+        <div class="submit-row">
+          <button type="submit">Register</button>
+        </div>
+
+      </form>
+    </div>
+  </body>
+</html>
