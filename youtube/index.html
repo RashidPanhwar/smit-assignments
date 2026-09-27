@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  </head>
+  <body>
+
+    <!-- ======================================================  HEADER  -->
+    <header class="header">
+      <div class="header-left">
+        <button class="icon-btn" aria-label="Menu">
+          <span class="material-icons">menu</span>
+        </button>
+        <a href="#" class="logo" aria-label="YouTube Home">
+          <svg class="logo-svg" viewBox="0 0 110 24" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="2" width="34" height="22" rx="5" fill="#FF0000"/>
+            <polygon points="13,7 13,19 25,13" fill="#fff"/>
+            <text x="39" y="18" font-family="Roboto,Arial,sans-serif" font-size="16" font-weight="700" fill="#030303">YouTube</text>
+          </svg>
+        </a>
+      </div>
+
+      <div class="header-center">
+        <form class="search-form" action="#" method="get">
+          <div class="search-input-wrap">
+            <input type="search" class="search-input" placeholder="Search" aria-label="Search" />
+          </div>
+          <button type="submit" class="search-btn" aria-label="Search">
+            <span class="material-icons">search</span>
+          </button>
+        </form>
+        <button class="icon-btn mic-btn" aria-label="Search with voice">
+          <span class="material-icons">mic</span>
+        </button>
+      </div>
+
+      <div class="header-right">
+        <button class="icon-btn" aria-label="Create"><span class="material-icons">videocam</span></button>
+        <button class="icon-btn" aria-label="Apps"><span class="material-icons">apps</span></button>
+        <button class="icon-btn" aria-label="Notifications"><span class="material-icons">notifications</span></button>
+        <a href="#" class="sign-in-btn">
+          <span class="material-icons" style="font-size:1.1rem;">account_circle</span>
+          Sign in
+        </a>
+      </div>
+    </header>
+
+    <!-- ======================================================  LAYOUT  -->
+    <div class="layout">
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <nav class="sidebar-nav">
+          <a href="#" class="sidebar-item active"><span class="material-icons">home</span><span class="sidebar-label">Home</span></a>
+          <a href="#" class="sidebar-item"><span class="material-icons">explore</span><span class="sidebar-label">Explore</span></a>
+          <a href="#" class="sidebar-item"><span class="material-icons">subscriptions</span><span class="sidebar-label">Subscriptions</span></a>
+          <div class="sidebar-divider"></div>
+          <a href="#" class="sidebar-item"><span class="material-icons">video_library</span><span class="sidebar-label">Library</span></a>
+          <a href="#" class="sidebar-item"><span class="material-icons">history</span><span class="sidebar-label">History</span></a>
+          <a href="#" class="sidebar-item"><span class="material-icons">smart_display</span><span class="sidebar-label">Your videos</span></a>
+          <a href="#" class="sidebar-item"><span class="material-icons">watch_later</span><span class="sidebar-label">Watch later</span></a>
+          <a href="#" class="sidebar-item"><span class="material-icons">thumb_up</span><span class="sidebar-label">Liked videos</span></a>
+          <div class="sidebar-divider"></div>
+          <p class="sidebar-section-title">Explore</p>
+          <a href="#" class="sidebar-item"><span class="material-icons">local_fire_department</span><span class="sidebar-label">Trending</span></a>
+          <a href="#" class="sidebar-item"><span class="material-icons">shopping_bag</span><span class="sidebar-label">Shopping</span></a>
+          <a href="#" class="sidebar-item"><span class="material-icons">music_note</span><span class="sidebar-label">Music</span></a>
+          <a href="#" class="sidebar-item"><span class="material-icons">sports_esports</span><span class="sidebar-label">Gaming</span></a>
+          <a href="#" class="sidebar-item"><span class="material-icons">newspaper</span><span class="sidebar-label">News</span></a>
+          <a href="#" class="sidebar-item"><span class="material-icons">emoji_events</span><span class="sidebar-label">Sports</span></a>
+          <a href="#" class="sidebar-item"><span class="material-icons">school</span><span class="sidebar-label">Learning</span></a>
+          <div class="sidebar-divider"></div>
+          <p class="sidebar-section-title">More from YouTube</p>
+          <a href="#" class="sidebar-item"><span class="material-icons">workspace_premium</span><span class="sidebar-label">YouTube Premium</span></a>
+          <a href="#" class="sidebar-item"><span class="material-icons">live_tv</span><span class="sidebar-label">YouTube TV</span></a>
+          <a href="#" class="sidebar-item"><span class="material-icons">music_video</span><span class="sidebar-label">YouTube Music</span></a>
+          <div class="sidebar-divider"></div>
+          <div class="sidebar-footer">
+            <div class="sidebar-links">
+              <a href="#">About</a><a href="#">Press</a><a href="#">Copyright</a>
+              <a href="#">Contact us</a><a href="#">Creators</a><a href="#">Advertise</a>
+            </div>
+            <div class="sidebar-links">
+              <a href="#">Terms</a><a href="#">Privacy</a><a href="#">Policy &amp; Safety</a>
+              <a href="#">How YouTube works</a>
+            </div>
+            <p class="copyright">&copy; 2026 Google LLC</p>
+          </div>
+        </nav>
+      </aside>
+
+      <!-- MAIN -->
+      <main class="main-content">
+
+        <!-- Filter chips -->
+        <div class="filter-bar">
+          <div class="filter-chips">
+            <button class="chip active">All</button>
+            <button class="chip">HTML &amp; CSS</button>
+            <button class="chip">JavaScript</button>
+            <button class="chip">React</button>
+            <button class="chip">Web Design</button>
+            <button class="chip">Flexbox</button>
+            <button class="chip">CSS Grid</button>
+            <button class="chip">Tailwind CSS</button>
+            <button class="chip">Bootstrap</button>
+            <button class="chip">Responsive Design</button>
+            <button class="chip">Frontend</button>
+            <button class="chip">Projects</button>
+          </div>
+        </div>
+
+        <!-- ================================================
+             VIDEO GRID
+             Each card:
+               data-vid  = YouTube video ID  (used by JS to build embed URL on hover)
+               data-alt  = alternate thumbnail index to cycle on hover (1,2,3 from YT)
+        ================================================= -->
+        <div class="video-grid">
+
+          <!-- ROW 1 -->
+          <div class="video-card" data-vid="G3e-cpL7ofc">
+            <a href="https://www.youtube.com/watch?v=G3e-cpL7ofc" target="_blank" class="thumb-link">
+              <div class="thumb-wrap">
+                <img src="https://img.youtube.com/vi/G3e-cpL7ofc/mqdefault.jpg" alt="HTML Full Course" class="thumb-img" loading="lazy" />
+                <div class="hover-overlay">
+                  <img src="https://img.youtube.com/vi/G3e-cpL7ofc/1.jpg" class="hover-frame f1" alt="" />
+                  <img src="https://img.youtube.com/vi/G3e-cpL7ofc/2.jpg" class="hover-frame f2" alt="" />
+                  <img src="https://img.youtube.com/vi/G3e-cpL7ofc/3.jpg" class="hover-frame f3" alt="" />
+                  <div class="progress-bar"><div class="progress-fill"></div></div>
+                </div>
+                <span class="duration">4:25:28</span>
+              </div>
+            </a>
+            <div class="video-info">
+              <div class="avatar" style="background:#e53935;">F</div>
+              <div class="video-meta">
+                <h3 class="video-title">HTML Full Course — Build a Website Tutorial</h3>
+                <p class="channel-name">freeCodeCamp.org</p>
+                <p class="video-stats">4.2M views &bull; 3 years ago</p>
+              </div>
+              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+            </div>
+          </div>
+
+          <div class="video-card" data-vid="OXGznpKZ_sA">
+            <a href="https://www.youtube.com/watch?v=OXGznpKZ_sA" target="_blank" class="thumb-link">
+              <div class="thumb-wrap">
+                <img src="https://img.youtube.com/vi/OXGznpKZ_sA/mqdefault.jpg" alt="CSS Tutorial Full Course" class="thumb-img" loading="lazy" />
+                <div class="hover-overlay">
+                  <img src="https://img.youtube.com/vi/OXGznpKZ_sA/1.jpg" class="hover-frame f1" alt="" />
+                  <img src="https://img.youtube.com/vi/OXGznpKZ_sA/2.jpg" class="hover-frame f2" alt="" />
+                  <img src="https://img.youtube.com/vi/OXGznpKZ_sA/3.jpg" class="hover-frame f3" alt="" />
+                  <div class="progress-bar"><div class="progress-fill"></div></div>
+                </div>
+                <span class="duration">11:17:27</span>
+              </div>
+            </a>
+            <div class="video-info">
+              <div class="avatar" style="background:#1e88e5;">F</div>
+              <div class="video-meta">
+                <h3 class="video-title">CSS Tutorial — Zero to Hero (Complete Course)</h3>
+                <p class="channel-name">freeCodeCamp.org</p>
+                <p class="video-stats">2.8M views &bull; 2 years ago</p>
+              </div>
+              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+            </div>
+          </div>
+
+          <div class="video-card" data-vid="mU6anWqZJcc">
+            <a href="https://www.youtube.com/watch?v=mU6anWqZJcc" target="_blank" class="thumb-link">
+              <div class="thumb-wrap">
+                <img src="https://img.youtube.com/vi/mU6anWqZJcc/mqdefault.jpg" alt="HTML CSS Crash Course" class="thumb-img" loading="lazy" />
+                <div class="hover-overlay">
+                  <img src="https://img.youtube.com/vi/mU6anWqZJcc/1.jpg" class="hover-frame f1" alt="" />
+                  <img src="https://img.youtube.com/vi/mU6anWqZJcc/2.jpg" class="hover-frame f2" alt="" />
+                  <img src="https://img.youtube.com/vi/mU6anWqZJcc/3.jpg" class="hover-frame f3" alt="" />
+                  <div class="progress-bar"><div class="progress-fill"></div></div>
+                </div>
+                <span class="duration">1:25:04</span>
+              </div>
+            </a>
+            <div class="video-info">
+              <div class="avatar" style="background:#43a047;">T</div>
+              <div class="video-meta">
+                <h3 class="video-title">HTML &amp; CSS Crash Course Tutorial for Beginners</h3>
+                <p class="channel-name">Traversy Media</p>
+                <p class="video-stats">3.1M views &bull; 4 years ago</p>
+              </div>
+              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+            </div>
+          </div>
+
+          <div class="video-card" data-vid="yfoY53QXEnI">
+            <a href="https://www.youtube.com/watch?v=yfoY53QXEnI" target="_blank" class="thumb-link">
+              <div class="thumb-wrap">
+                <img src="https://img.youtube.com/vi/yfoY53QXEnI/mqdefault.jpg" alt="CSS Flexbox" class="thumb-img" loading="lazy" />
+                <div class="hover-overlay">
+                  <img src="https://img.youtube.com/vi/yfoY53QXEnI/1.jpg" class="hover-frame f1" alt="" />
+                  <img src="https://img.youtube.com/vi/yfoY53QXEnI/2.jpg" class="hover-frame f2" alt="" />
+                  <img src="https://img.youtube.com/vi/yfoY53QXEnI/3.jpg" class="hover-frame f3" alt="" />
+                  <div class="progress-bar"><div class="progress-fill"></div></div>
+                </div>
+                <span class="duration">40:42</span>
+              </div>
+            </a>
+            <div class="video-info">
+              <div class="avatar" style="background:#8e24aa;">T</div>
+              <div class="video-meta">
+                <h3 class="video-title">CSS Flexbox Crash Course</h3>
+                <p class="channel-name">Traversy Media</p>
+                <p class="video-stats">1.6M views &bull; 3 years ago</p>
+              </div>
+              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+            </div>
+          </div>
+
+          <!-- ROW 2 -->
+          <div class="video-card" data-vid="p0bGHP-PXD4">
+            <a href="https://www.youtube.com/watch?v=p0bGHP-PXD4" target="_blank" class="thumb-link">
+              <div class="thumb-wrap">
+                <img src="https://img.youtube.com/vi/p0bGHP-PXD4/mqdefault.jpg" alt="Build Website" class="thumb-img" loading="lazy" />
+                <div class="hover-overlay">
+                  <img src="https://img.youtube.com/vi/p0bGHP-PXD4/1.jpg" class="hover-frame f1" alt="" />
+                  <img src="https://img.youtube.com/vi/p0bGHP-PXD4/2.jpg" class="hover-frame f2" alt="" />
+                  <img src="https://img.youtube.com/vi/p0bGHP-PXD4/3.jpg" class="hover-frame f3" alt="" />
+                  <div class="progress-bar"><div class="progress-fill"></div></div>
+                </div>
+                <span class="duration">1:04:22</span>
+              </div>
+            </a>
+            <div class="video-info">
+              <div class="avatar" style="background:#00897b;">K</div>
+              <div class="video-meta">
+                <h3 class="video-title">Build a Website With HTML &amp; CSS — For Absolute Beginners</h3>
+                <p class="channel-name">Kevin Powell</p>
+                <p class="video-stats">890K views &bull; 1 year ago</p>
+              </div>
+              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+            </div>
+          </div>
+
+          <div class="video-card" data-vid="D-h8L5hgW-w">
+            <a href="https://www.youtube.com/watch?v=D-h8L5hgW-w" target="_blank" class="thumb-link">
+              <div class="thumb-wrap">
+                <img src="https://img.youtube.com/vi/D-h8L5hgW-w/mqdefault.jpg" alt="CSS Grid" class="thumb-img" loading="lazy" />
+                <div class="hover-overlay">
+                  <img src="https://img.youtube.com/vi/D-h8L5hgW-w/1.jpg" class="hover-frame f1" alt="" />
+                  <img src="https://img.youtube.com/vi/D-h8L5hgW-w/2.jpg" class="hover-frame f2" alt="" />
+                  <img src="https://img.youtube.com/vi/D-h8L5hgW-w/3.jpg" class="hover-frame f3" alt="" />
+                  <div class="progress-bar"><div class="progress-fill"></div></div>
+                </div>
+                <span class="duration">41:06</span>
+              </div>
+            </a>
+            <div class="video-info">
+              <div class="avatar" style="background:#f57c00;">T</div>
+              <div class="video-meta">
+                <h3 class="video-title">CSS Grid Crash Course</h3>
+                <p class="channel-name">Traversy Media</p>
+                <p class="video-stats">1.2M views &bull; 5 years ago</p>
+              </div>
+              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+            </div>
+          </div>
+
+          <div class="video-card" data-vid="Wm6CUkswsNw">
+            <a href="https://www.youtube.com/watch?v=Wm6CUkswsNw" target="_blank" class="thumb-link">
+              <div class="thumb-wrap">
+                <img src="https://img.youtube.com/vi/Wm6CUkswsNw/mqdefault.jpg" alt="Responsive Web Design" class="thumb-img" loading="lazy" />
+                <div class="hover-overlay">
+                  <img src="https://img.youtube.com/vi/Wm6CUkswsNw/1.jpg" class="hover-frame f1" alt="" />
+                  <img src="https://img.youtube.com/vi/Wm6CUkswsNw/2.jpg" class="hover-frame f2" alt="" />
+                  <img src="https://img.youtube.com/vi/Wm6CUkswsNw/3.jpg" class="hover-frame f3" alt="" />
+                  <div class="progress-bar"><div class="progress-fill"></div></div>
+                </div>
+                <span class="duration">3:21:44</span>
+              </div>
+            </a>
+            <div class="video-info">
+              <div class="avatar" style="background:#e53935;">F</div>
+              <div class="video-meta">
+                <h3 class="video-title">Responsive Web Design — HTML &amp; CSS Tutorial</h3>
+                <p class="channel-name">freeCodeCamp.org</p>
+                <p class="video-stats">2.0M views &bull; 2 years ago</p>
+              </div>
+              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+            </div>
+          </div>
+
+          <div class="video-card" data-vid="1Rs2ND1ryYc">
+            <a href="https://www.youtube.com/watch?v=1Rs2ND1ryYc" target="_blank" class="thumb-link">
+              <div class="thumb-wrap">
+                <img src="https://img.youtube.com/vi/1Rs2ND1ryYc/mqdefault.jpg" alt="CSS Tutorial Beginners" class="thumb-img" loading="lazy" />
+                <div class="hover-overlay">
+                  <img src="https://img.youtube.com/vi/1Rs2ND1ryYc/1.jpg" class="hover-frame f1" alt="" />
+                  <img src="https://img.youtube.com/vi/1Rs2ND1ryYc/2.jpg" class="hover-frame f2" alt="" />
+                  <img src="https://img.youtube.com/vi/1Rs2ND1ryYc/3.jpg" class="hover-frame f3" alt="" />
+                  <div class="progress-bar"><div class="progress-fill"></div></div>
+                </div>
+                <span class="duration">6:17:09</span>
+              </div>
+            </a>
+            <div class="video-info">
+              <div class="avatar" style="background:#1565c0;">N</div>
+              <div class="video-meta">
+                <h3 class="video-title">CSS Tutorial for Beginners — Full Course</h3>
+                <p class="channel-name">Net Ninja</p>
+                <p class="video-stats">1.5M views &bull; 3 years ago</p>
+              </div>
+              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+            </div>
+          </div>
+
+          <!-- ROW 3 -->
+          <div class="video-card" data-vid="HGTJBPNC-Gw">
+            <a href="https://www.youtube.com/watch?v=HGTJBPNC-Gw" target="_blank" class="thumb-link">
+              <div class="thumb-wrap">
+                <img src="https://img.youtube.com/vi/HGTJBPNC-Gw/mqdefault.jpg" alt="HTML Forms" class="thumb-img" loading="lazy" />
+                <div class="hover-overlay">
+                  <img src="https://img.youtube.com/vi/HGTJBPNC-Gw/1.jpg" class="hover-frame f1" alt="" />
+                  <img src="https://img.youtube.com/vi/HGTJBPNC-Gw/2.jpg" class="hover-frame f2" alt="" />
+                  <img src="https://img.youtube.com/vi/HGTJBPNC-Gw/3.jpg" class="hover-frame f3" alt="" />
+                  <div class="progress-bar"><div class="progress-fill"></div></div>
+                </div>
+                <span class="duration">32:16</span>
+              </div>
+            </a>
+            <div class="video-info">
+              <div class="avatar" style="background:#00695c;">W</div>
+              <div class="video-meta">
+                <h3 class="video-title">HTML Forms &amp; Inputs — Complete Tutorial</h3>
+                <p class="channel-name">Web Dev Simplified</p>
+                <p class="video-stats">720K views &bull; 2 years ago</p>
+              </div>
+              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+            </div>
+          </div>
+
+          <div class="video-card" data-vid="srvUrASNj0s">
+            <a href="https://www.youtube.com/watch?v=srvUrASNj0s" target="_blank" class="thumb-link">
+              <div class="thumb-wrap">
+                <img src="https://img.youtube.com/vi/srvUrASNj0s/mqdefault.jpg" alt="HTML Tables" class="thumb-img" loading="lazy" />
+                <div class="hover-overlay">
+                  <img src="https://img.youtube.com/vi/srvUrASNj0s/1.jpg" class="hover-frame f1" alt="" />
+                  <img src="https://img.youtube.com/vi/srvUrASNj0s/2.jpg" class="hover-frame f2" alt="" />
+                  <img src="https://img.youtube.com/vi/srvUrASNj0s/3.jpg" class="hover-frame f3" alt="" />
+                  <div class="progress-bar"><div class="progress-fill"></div></div>
+                </div>
+                <span class="duration">20:47</span>
+              </div>
+            </a>
+            <div class="video-info">
+              <div class="avatar" style="background:#ad1457;">D</div>
+              <div class="video-meta">
+                <h3 class="video-title">HTML Tables Tutorial — Complete Guide</h3>
+                <p class="channel-name">Dani Krossing</p>
+                <p class="video-stats">310K views &bull; 4 years ago</p>
+              </div>
+              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+            </div>
+          </div>
+
+          <div class="video-card" data-vid="bn-DQCifeQQ">
+            <a href="https://www.youtube.com/watch?v=bn-DQCifeQQ" target="_blank" class="thumb-link">
+              <div class="thumb-wrap">
+                <img src="https://img.youtube.com/vi/bn-DQCifeQQ/mqdefault.jpg" alt="CSS Animations" class="thumb-img" loading="lazy" />
+                <div class="hover-overlay">
+                  <img src="https://img.youtube.com/vi/bn-DQCifeQQ/1.jpg" class="hover-frame f1" alt="" />
+                  <img src="https://img.youtube.com/vi/bn-DQCifeQQ/2.jpg" class="hover-frame f2" alt="" />
+                  <img src="https://img.youtube.com/vi/bn-DQCifeQQ/3.jpg" class="hover-frame f3" alt="" />
+                  <div class="progress-bar"><div class="progress-fill"></div></div>
+                </div>
+                <span class="duration">46:22</span>
+              </div>
+            </a>
+            <div class="video-info">
+              <div class="avatar" style="background:#6a1b9a;">K</div>
+              <div class="video-meta">
+                <h3 class="video-title">CSS Animations — Transitions &amp; Keyframes</h3>
+                <p class="channel-name">Kevin Powell</p>
+                <p class="video-stats">540K views &bull; 2 years ago</p>
+              </div>
+              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+            </div>
+          </div>
+
+          <div class="video-card" data-vid="phWxA89Dy94">
+            <a href="https://www.youtube.com/watch?v=phWxA89Dy94" target="_blank" class="thumb-link">
+              <div class="thumb-wrap">
+                <img src="https://img.youtube.com/vi/phWxA89Dy94/mqdefault.jpg" alt="Tailwind CSS" class="thumb-img" loading="lazy" />
+                <div class="hover-overlay">
+                  <img src="https://img.youtube.com/vi/phWxA89Dy94/1.jpg" class="hover-frame f1" alt="" />
+                  <img src="https://img.youtube.com/vi/phWxA89Dy94/2.jpg" class="hover-frame f2" alt="" />
+                  <img src="https://img.youtube.com/vi/phWxA89Dy94/3.jpg" class="hover-frame f3" alt="" />
+                  <div class="progress-bar"><div class="progress-fill"></div></div>
+                </div>
+                <span class="duration">1:12:10</span>
+              </div>
+            </a>
+            <div class="video-info">
+              <div class="avatar" style="background:#00838f;">T</div>
+              <div class="video-meta">
+                <h3 class="video-title">Tailwind CSS Crash Course</h3>
+                <p class="channel-name">Traversy Media</p>
+                <p class="video-stats">1.9M views &bull; 3 years ago</p>
+              </div>
+              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+            </div>
+          </div>
+
+          <!-- ROW 4 -->
+          <div class="video-card" data-vid="pQN-pnXPaVg">
+            <a href="https://www.youtube.com/watch?v=pQN-pnXPaVg" target="_blank" class="thumb-link">
+              <div class="thumb-wrap">
+                <img src="https://img.youtube.com/vi/pQN-pnXPaVg/mqdefault.jpg" alt="HTML Tutorial Beginners" class="thumb-img" loading="lazy" />
+                <div class="hover-overlay">
+                  <img src="https://img.youtube.com/vi/pQN-pnXPaVg/1.jpg" class="hover-frame f1" alt="" />
+                  <img src="https://img.youtube.com/vi/pQN-pnXPaVg/2.jpg" class="hover-frame f2" alt="" />
+                  <img src="https://img.youtube.com/vi/pQN-pnXPaVg/3.jpg" class="hover-frame f3" alt="" />
+                  <div class="progress-bar"><div class="progress-fill"></div></div>
+                </div>
+                <span class="duration">1:00:41</span>
+              </div>
+            </a>
+            <div class="video-info">
+              <div class="avatar" style="background:#c62828;">P</div>
+              <div class="video-meta">
+                <h3 class="video-title">HTML Tutorial for Beginners — HTML Crash Course</h3>
+                <p class="channel-name">Programming with Mosh</p>
+                <p class="video-stats">4.8M views &bull; 5 years ago</p>
+              </div>
+              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+            </div>
+          </div>
+
+          <div class="video-card" data-vid="wRNinF7YQqQ">
+            <a href="https://www.youtube.com/watch?v=wRNinF7YQqQ" target="_blank" class="thumb-link">
+              <div class="thumb-wrap">
+                <img src="https://img.youtube.com/vi/wRNinF7YQqQ/mqdefault.jpg" alt="CSS Variables" class="thumb-img" loading="lazy" />
+                <div class="hover-overlay">
+                  <img src="https://img.youtube.com/vi/wRNinF7YQqQ/1.jpg" class="hover-frame f1" alt="" />
+                  <img src="https://img.youtube.com/vi/wRNinF7YQqQ/2.jpg" class="hover-frame f2" alt="" />
+                  <img src="https://img.youtube.com/vi/wRNinF7YQqQ/3.jpg" class="hover-frame f3" alt="" />
+                  <div class="progress-bar"><div class="progress-fill"></div></div>
+                </div>
+                <span class="duration">18:35</span>
+              </div>
+            </a>
+            <div class="video-info">
+              <div class="avatar" style="background:#2e7d32;">K</div>
+              <div class="video-meta">
+                <h3 class="video-title">CSS Custom Properties (Variables) — Full Tutorial</h3>
+                <p class="channel-name">Kevin Powell</p>
+                <p class="video-stats">405K views &bull; 3 years ago</p>
+              </div>
+              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+            </div>
+          </div>
+
+          <div class="video-card" data-vid="jS4aFq5-91M">
+            <a href="https://www.youtube.com/watch?v=jS4aFq5-91M" target="_blank" class="thumb-link">
+              <div class="thumb-wrap">
+                <img src="https://img.youtube.com/vi/jS4aFq5-91M/mqdefault.jpg" alt="JavaScript Full Course" class="thumb-img" loading="lazy" />
+                <div class="hover-overlay">
+                  <img src="https://img.youtube.com/vi/jS4aFq5-91M/1.jpg" class="hover-frame f1" alt="" />
+                  <img src="https://img.youtube.com/vi/jS4aFq5-91M/2.jpg" class="hover-frame f2" alt="" />
+                  <img src="https://img.youtube.com/vi/jS4aFq5-91M/3.jpg" class="hover-frame f3" alt="" />
+                  <div class="progress-bar"><div class="progress-fill"></div></div>
+                </div>
+                <span class="duration">8:11:09</span>
+              </div>
+            </a>
+            <div class="video-info">
+              <div class="avatar" style="background:#f9a825;">B</div>
+              <div class="video-meta">
+                <h3 class="video-title">JavaScript Full Course for Beginners</h3>
+                <p class="channel-name">Bro Code</p>
+                <p class="video-stats">3.6M views &bull; 2 years ago</p>
+              </div>
+              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+            </div>
+          </div>
+
+          <div class="video-card" data-vid="EiNiSFIPIQE">
+            <a href="https://www.youtube.com/watch?v=EiNiSFIPIQE" target="_blank" class="thumb-link">
+              <div class="thumb-wrap">
+                <img src="https://img.youtube.com/vi/EiNiSFIPIQE/mqdefault.jpg" alt="CSS Position" class="thumb-img" loading="lazy" />
+                <div class="hover-overlay">
+                  <img src="https://img.youtube.com/vi/EiNiSFIPIQE/1.jpg" class="hover-frame f1" alt="" />
+                  <img src="https://img.youtube.com/vi/EiNiSFIPIQE/2.jpg" class="hover-frame f2" alt="" />
+                  <img src="https://img.youtube.com/vi/EiNiSFIPIQE/3.jpg" class="hover-frame f3" alt="" />
+                  <div class="progress-bar"><div class="progress-fill"></div></div>
+                </div>
+                <span class="duration">24:58</span>
+              </div>
+            </a>
+            <div class="video-info">
+              <div class="avatar" style="background:#4527a0;">K</div>
+              <div class="video-meta">
+                <h3 class="video-title">CSS Positioning — A Complete Tutorial</h3>
+                <p class="channel-name">Kevin Powell</p>
+                <p class="video-stats">610K views &bull; 4 years ago</p>
+              </div>
+              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+            </div>
+          </div>
+
+          <!-- ROW 5 -->
+          <div class="video-card" data-vid="ysEN5RaKOlA">
+            <a href="https://www.youtube.com/watch?v=ysEN5RaKOlA" target="_blank" class="thumb-link">
+              <div class="thumb-wrap">
+                <img src="https://img.youtube.com/vi/ysEN5RaKOlA/mqdefault.jpg" alt="CSS Box Model" class="thumb-img" loading="lazy" />
+                <div class="hover-overlay">
+                  <img src="https://img.youtube.com/vi/ysEN5RaKOlA/1.jpg" class="hover-frame f1" alt="" />
+                  <img src="https://img.youtube.com/vi/ysEN5RaKOlA/2.jpg" class="hover-frame f2" alt="" />
+                  <img src="https://img.youtube.com/vi/ysEN5RaKOlA/3.jpg" class="hover-frame f3" alt="" />
+                  <div class="progress-bar"><div class="progress-fill"></div></div>
+                </div>
+                <span class="duration">16:30</span>
+              </div>
+            </a>
+            <div class="video-info">
+              <div class="avatar" style="background:#00838f;">K</div>
+              <div class="video-meta">
+                <h3 class="video-title">CSS Box Model — Padding, Border &amp; Margin Explained</h3>
+                <p class="channel-name">Kevin Powell</p>
+                <p class="video-stats">280K views &bull; 3 years ago</p>
+              </div>
+              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+            </div>
+          </div>
+
+          <div class="video-card" data-vid="9YffrCViTVk">
+            <a href="https://www.youtube.com/watch?v=9YffrCViTVk" target="_blank" class="thumb-link">
+              <div class="thumb-wrap">
+                <img src="https://img.youtube.com/vi/9YffrCViTVk/mqdefault.jpg" alt="HTML5 Semantics" class="thumb-img" loading="lazy" />
+                <div class="hover-overlay">
+                  <img src="https://img.youtube.com/vi/9YffrCViTVk/1.jpg" class="hover-frame f1" alt="" />
+                  <img src="https://img.youtube.com/vi/9YffrCViTVk/2.jpg" class="hover-frame f2" alt="" />
+                  <img src="https://img.youtube.com/vi/9YffrCViTVk/3.jpg" class="hover-frame f3" alt="" />
+                  <div class="progress-bar"><div class="progress-fill"></div></div>
+                </div>
+                <span class="duration">28:14</span>
+              </div>
+            </a>
+            <div class="video-info">
+              <div class="avatar" style="background:#37474f;">D</div>
+              <div class="video-meta">
+                <h3 class="video-title">HTML5 Semantic Elements Explained</h3>
+                <p class="channel-name">Dave Gray</p>
+                <p class="video-stats">195K views &bull; 2 years ago</p>
+              </div>
+              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+            </div>
+          </div>
+
+          <div class="video-card" data-vid="ieTHC78giGQ">
+            <a href="https://www.youtube.com/watch?v=ieTHC78giGQ" target="_blank" class="thumb-link">
+              <div class="thumb-wrap">
+                <img src="https://img.youtube.com/vi/ieTHC78giGQ/mqdefault.jpg" alt="Bootstrap 5" class="thumb-img" loading="lazy" />
+                <div class="hover-overlay">
+                  <img src="https://img.youtube.com/vi/ieTHC78giGQ/1.jpg" class="hover-frame f1" alt="" />
+                  <img src="https://img.youtube.com/vi/ieTHC78giGQ/2.jpg" class="hover-frame f2" alt="" />
+                  <img src="https://img.youtube.com/vi/ieTHC78giGQ/3.jpg" class="hover-frame f3" alt="" />
+                  <div class="progress-bar"><div class="progress-fill"></div></div>
+                </div>
+                <span class="duration">2:14:56</span>
+              </div>
+            </a>
+            <div class="video-info">
+              <div class="avatar" style="background:#c62828;">T</div>
+              <div class="video-meta">
+                <h3 class="video-title">Bootstrap 5 Crash Course</h3>
+                <p class="channel-name">Traversy Media</p>
+                <p class="video-stats">1.1M views &bull; 3 years ago</p>
+              </div>
+              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+            </div>
+          </div>
+
+          <div class="video-card" data-vid="3PHXvlpOkf4">
+            <a href="https://www.youtube.com/watch?v=3PHXvlpOkf4" target="_blank" class="thumb-link">
+              <div class="thumb-wrap">
+                <img src="https://img.youtube.com/vi/3PHXvlpOkf4/mqdefault.jpg" alt="HTML CSS Projects" class="thumb-img" loading="lazy" />
+                <div class="hover-overlay">
+                  <img src="https://img.youtube.com/vi/3PHXvlpOkf4/1.jpg" class="hover-frame f1" alt="" />
+                  <img src="https://img.youtube.com/vi/3PHXvlpOkf4/2.jpg" class="hover-frame f2" alt="" />
+                  <img src="https://img.youtube.com/vi/3PHXvlpOkf4/3.jpg" class="hover-frame f3" alt="" />
+                  <div class="progress-bar"><div class="progress-fill"></div></div>
+                </div>
+                <span class="duration">3:44:28</span>
+              </div>
+            </a>
+            <div class="video-info">
+              <div class="avatar" style="background:#e65100;">Z</div>
+              <div class="video-meta">
+                <h3 class="video-title">5 HTML CSS Projects for Beginners — Build and Learn</h3>
+                <p class="channel-name">Zero To Mastery</p>
+                <p class="video-stats">850K views &bull; 2 years ago</p>
+              </div>
+              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+            </div>
+          </div>
+
+        </div><!-- end .video-grid -->
+      </main>
+    </div><!-- end .layout -->
+
+  </body>
+</html>

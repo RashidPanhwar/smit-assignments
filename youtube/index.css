@@ -1,0 +1,572 @@
+/* =====================================================
+   YOUTUBE CLONE — index.css
+   Font: Roboto (same as YouTube)
+   Colors: exact YouTube light theme
+===================================================== */
+
+/* ---- CSS VARIABLES ---- */
+:root {
+  --bg:           #ffffff;
+  --bg-secondary: #f2f2f2;
+  --text-primary: #0f0f0f;
+  --text-secondary: #606060;
+  --text-tertiary: #909090;
+  --border:       #e5e5e5;
+  --hover-bg:     #f2f2f2;
+  --active-bg:    #e5e5e5;
+  --red:          #ff0000;
+  --blue:         #065fd4;
+  --header-h:     56px;
+  --sidebar-w:    240px;
+  --chip-h:       32px;
+  --filter-h:     56px;
+}
+
+/* ---- RESET ---- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 14px;
+  color: var(--text-primary);
+  background: var(--bg);
+  overflow-x: hidden;
+}
+
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+img { display: block; max-width: 100%; }
+
+/* =====================================================
+   HEADER
+===================================================== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  height: var(--header-h);
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  gap: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* --- Left --- */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 180px;
+}
+
+.icon-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+.icon-btn:hover { background: var(--hover-bg); }
+.icon-btn .material-icons { font-size: 1.5rem; }
+
+.logo { display: flex; align-items: center; }
+.logo-svg {
+  height: 20px;
+  width: 90px;
+}
+
+/* --- Center (Search) --- */
+.header-center {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  max-width: 640px;
+  justify-content: center;
+}
+
+.search-form {
+  display: flex;
+  flex: 1;
+  max-width: 560px;
+}
+
+.search-input-wrap {
+  flex: 1;
+  border: 1px solid var(--border);
+  border-right: none;
+  border-radius: 40px 0 0 40px;
+  padding: 0 16px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  background: var(--bg);
+  transition: border-color 0.15s;
+}
+.search-input-wrap:focus-within {
+  border-color: var(--blue);
+  box-shadow: inset 0 0 0 1px var(--blue);
+}
+
+.search-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-family: 'Roboto', Arial, sans-serif;
+  color: var(--text-primary);
+  background: transparent;
+}
+.search-input::placeholder { color: var(--text-tertiary); }
+/* hide the native X button on search inputs */
+.search-input::-webkit-search-cancel-button { display: none; }
+
+.search-btn {
+  width: 64px;
+  height: 40px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 0 40px 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: background 0.15s;
+}
+.search-btn:hover { background: #e5e5e5; }
+.search-btn .material-icons { font-size: 1.3rem; }
+
+.mic-btn { color: var(--text-primary); }
+
+/* --- Right --- */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 180px;
+  justify-content: flex-end;
+}
+
+.sign-in-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border: 1px solid #3ea6ff;
+  border-radius: 20px;
+  color: #065fd4;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+.sign-in-btn:hover { background: #def1ff; }
+
+/* =====================================================
+   LAYOUT  (sidebar + main)
+===================================================== */
+.layout {
+  display: flex;
+  margin-top: var(--header-h);
+}
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+.sidebar {
+  position: fixed;
+  top: var(--header-h);
+  left: 0;
+  width: var(--sidebar-w);
+  height: calc(100vh - var(--header-h));
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: var(--bg);
+  padding: 12px 0 24px;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  z-index: 100;
+}
+.sidebar:hover { scrollbar-color: #ccc transparent; }
+.sidebar::-webkit-scrollbar { width: 6px; }
+.sidebar::-webkit-scrollbar-thumb { background: #ccc; border-radius: 3px; }
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 0 12px;
+  height: 40px;
+  border-radius: 10px;
+  margin: 0 4px;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  font-weight: 400;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+.sidebar-item:hover { background: var(--hover-bg); }
+.sidebar-item.active { background: var(--active-bg); font-weight: 600; }
+.sidebar-item .material-icons { font-size: 1.35rem; flex-shrink: 0; }
+
+.sidebar-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 12px 0;
+}
+
+.sidebar-section-title {
+  padding: 8px 20px 4px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.sidebar-footer {
+  padding: 16px 20px;
+}
+
+.sidebar-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  margin-bottom: 6px;
+}
+
+.sidebar-links a {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  transition: color 0.15s;
+}
+.sidebar-links a:hover { color: var(--text-primary); }
+
+.copyright {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  margin-top: 8px;
+}
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+.main-content {
+  margin-left: var(--sidebar-w);
+  width: calc(100% - var(--sidebar-w));
+  min-height: calc(100vh - var(--header-h));
+}
+
+/* ---- Filter Bar ---- */
+.filter-bar {
+  position: sticky;
+  top: var(--header-h);
+  z-index: 99;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px;
+  height: var(--filter-h);
+  display: flex;
+  align-items: center;
+}
+
+.filter-chips {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 2px;
+}
+.filter-chips::-webkit-scrollbar { display: none; }
+
+.chip {
+  height: var(--chip-h);
+  padding: 0 12px;
+  border-radius: 8px;
+  background: var(--text-primary);
+  color: var(--bg);
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+  font-family: 'Roboto', Arial, sans-serif;
+  flex-shrink: 0;
+}
+.chip:not(.active) {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+.chip:not(.active):hover { background: #e5e5e5; }
+.chip.active { background: var(--text-primary); color: var(--bg); }
+
+/* ---- Video Grid ---- */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px 16px;
+  padding: 24px 24px 40px;
+}
+
+/* ---- Video Card ---- */
+.video-card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+/* Thumbnail wrapper */
+.thumb-link { display: block; }
+
+.thumb-wrap {
+  position: relative;
+  width: 100%;
+  /* 16:9 aspect ratio */
+  padding-bottom: 56.25%;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Thumbnail image — always visible, slightly zooms on hover */
+.thumb-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: opacity 0.25s ease, transform 0.3s ease;
+  z-index: 2;
+}
+
+/* On hover: hide static thumbnail, show overlay */
+.video-card:hover .thumb-img {
+  opacity: 0;
+}
+
+/* ---- HOVER OVERLAY (3-frame preview + progress bar) ---- */
+.hover-overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: 3;
+}
+
+.video-card:hover .hover-overlay {
+  opacity: 1;
+}
+
+/* Three preview frames stacked — CSS animates which is visible */
+.hover-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+}
+
+/* Stagger frames: f1 shows 0-33%, f2 shows 33-66%, f3 shows 66-100% */
+.video-card:hover .hover-frame.f1 {
+  animation: showFrame 3s steps(1, end) infinite;
+  animation-delay: 0s;
+}
+.video-card:hover .hover-frame.f2 {
+  animation: showFrame 3s steps(1, end) infinite;
+  animation-delay: 1s;
+}
+.video-card:hover .hover-frame.f3 {
+  animation: showFrame 3s steps(1, end) infinite;
+  animation-delay: 2s;
+}
+
+@keyframes showFrame {
+  0%   { opacity: 1; }
+  33%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* Progress bar at bottom of thumb — like YouTube's hover scrub */
+.progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: rgba(255,255,255,0.3);
+  z-index: 5;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: #ff0000;
+  border-radius: 0 2px 2px 0;
+}
+
+.video-card:hover .progress-fill {
+  animation: fillBar 3s linear infinite;
+}
+
+@keyframes fillBar {
+  from { width: 0%; }
+  to   { width: 100%; }
+}
+
+/* Duration badge */
+.duration {
+  position: absolute;
+  bottom: 10px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 2px 5px;
+  border-radius: 4px;
+  z-index: 6;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s;
+}
+
+/* Hide duration badge while hovering (like real YouTube) */
+.video-card:hover .duration {
+  opacity: 0;
+}
+
+/* Video info row */
+.video-info {
+  display: flex;
+  gap: 12px;
+  padding: 12px 0 4px;
+  position: relative;
+}
+
+/* Channel avatar */
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+/* Meta text */
+.video-meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.video-title {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.4;
+  margin-bottom: 4px;
+  /* clamp to 2 lines */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.channel-name {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  margin-bottom: 2px;
+}
+.channel-name:hover { color: var(--text-primary); }
+
+.video-stats {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+}
+
+/* 3-dot menu */
+.more-btn {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  opacity: 0;
+  transition: opacity 0.15s, background 0.15s;
+}
+.more-btn .material-icons { font-size: 1.25rem; }
+.video-card:hover .more-btn { opacity: 1; }
+.more-btn:hover { background: var(--hover-bg); }
+
+/* =====================================================
+   SCROLLBAR (main area)
+===================================================== */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #c0c0c0; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #a0a0a0; }
+
+/* =====================================================
+   RESPONSIVE TWEAKS
+===================================================== */
+@media (max-width: 1024px) {
+  :root { --sidebar-w: 72px; }
+
+  .sidebar-label,
+  .sidebar-section-title,
+  .sidebar-footer { display: none; }
+
+  .sidebar-item {
+    justify-content: center;
+    gap: 0;
+    padding: 0;
+  }
+
+  .main-content { margin-left: 72px; width: calc(100% - 72px); }
+}
+
+@media (max-width: 768px) {
+  :root { --sidebar-w: 0px; }
+  .sidebar { display: none; }
+  .main-content { margin-left: 0; width: 100%; }
+
+  .video-grid {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+
+  .header-center { max-width: unset; }
+}
