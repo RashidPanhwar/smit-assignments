@@ -348,7 +348,7 @@ img { display: block; max-width: 100%; }
   overflow: hidden;
 }
 
-/* Thumbnail image — always visible, slightly zooms on hover */
+/* ── Thumbnail image ─────────────────────────────────────── */
 .thumb-img {
   position: absolute;
   inset: 0;
@@ -356,88 +356,39 @@ img { display: block; max-width: 100%; }
   height: 100%;
   object-fit: cover;
   border-radius: 12px;
-  transition: opacity 0.25s ease, transform 0.3s ease;
+  /* opacity is driven by JS during crossfade; default = fully visible */
+  opacity: 1;
   z-index: 2;
+  will-change: opacity;
 }
 
-/* On hover: hide static thumbnail, show overlay */
-.video-card:hover .thumb-img {
-  opacity: 0;
-}
-
-/* ---- HOVER OVERLAY (3-frame preview + progress bar) ---- */
-.hover-overlay {
+/* ── Preview slot (YT IFrame API mounts inside here) ─────── */
+.preview-slot {
   position: absolute;
   inset: 0;
+  z-index: 3;
   border-radius: 12px;
   overflow: hidden;
+  /* hidden until JS fades it in */
   opacity: 0;
-  transition: opacity 0.25s ease;
-  z-index: 3;
+  pointer-events: none;  /* let clicks pass through to the <a> link */
+  will-change: opacity;
+  background: #000;
 }
 
-.video-card:hover .hover-overlay {
-  opacity: 1;
-}
-
-/* Three preview frames stacked — CSS animates which is visible */
-.hover-frame {
+/* The actual <iframe> injected by JS fills the slot */
+.preview-slot iframe {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
+  /* pull out to hide YouTube's title bar (top) and watermark (bottom-right) */
+  top: -50px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 100px);
+  border: 0;
+  pointer-events: none; /* keep the <a> link clickable through the iframe */
 }
 
-/* Stagger frames: f1 shows 0-33%, f2 shows 33-66%, f3 shows 66-100% */
-.video-card:hover .hover-frame.f1 {
-  animation: showFrame 3s steps(1, end) infinite;
-  animation-delay: 0s;
-}
-.video-card:hover .hover-frame.f2 {
-  animation: showFrame 3s steps(1, end) infinite;
-  animation-delay: 1s;
-}
-.video-card:hover .hover-frame.f3 {
-  animation: showFrame 3s steps(1, end) infinite;
-  animation-delay: 2s;
-}
-
-@keyframes showFrame {
-  0%   { opacity: 1; }
-  33%  { opacity: 0; }
-  100% { opacity: 0; }
-}
-
-/* Progress bar at bottom of thumb — like YouTube's hover scrub */
-.progress-bar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: rgba(255,255,255,0.3);
-  z-index: 5;
-}
-
-.progress-fill {
-  height: 100%;
-  width: 0%;
-  background: #ff0000;
-  border-radius: 0 2px 2px 0;
-}
-
-.video-card:hover .progress-fill {
-  animation: fillBar 3s linear infinite;
-}
-
-@keyframes fillBar {
-  from { width: 0%; }
-  to   { width: 100%; }
-}
-
-/* Duration badge */
+/* ── Duration badge ──────────────────────────────────────── */
 .duration {
   position: absolute;
   bottom: 10px;
@@ -448,13 +399,14 @@ img { display: block; max-width: 100%; }
   font-weight: 500;
   padding: 2px 5px;
   border-radius: 4px;
-  z-index: 6;
+  /* sits above both thumbnail and preview */
+  z-index: 5;
   letter-spacing: 0.3px;
-  transition: opacity 0.2s;
+  transition: opacity 0.25s ease;
 }
 
-/* Hide duration badge while hovering (like real YouTube) */
-.video-card:hover .duration {
+/* Hide duration while preview is playing */
+.thumb-wrap.previewing .duration {
   opacity: 0;
 }
 

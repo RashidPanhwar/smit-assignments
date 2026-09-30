@@ -119,23 +119,19 @@
 
         <!-- ================================================
              VIDEO GRID
-             Each card:
-               data-vid  = YouTube video ID  (used by JS to build embed URL on hover)
-               data-alt  = alternate thumbnail index to cycle on hover (1,2,3 from YT)
+             .thumb-wrap  — data-vid holds the YouTube video ID
+             .preview-slot — hidden div; YT IFrame API mounts a player here on first hover
+             Hover → crossfade thumbnail out, preview plays (muted)
+             Mouse leave → thumbnail fades back, preview stops
         ================================================= -->
         <div class="video-grid">
 
           <!-- ROW 1 -->
-          <div class="video-card" data-vid="G3e-cpL7ofc">
+          <div class="video-card">
             <a href="https://www.youtube.com/watch?v=G3e-cpL7ofc" target="_blank" class="thumb-link">
-              <div class="thumb-wrap">
+              <div class="thumb-wrap" data-vid="G3e-cpL7ofc">
                 <img src="https://img.youtube.com/vi/G3e-cpL7ofc/mqdefault.jpg" alt="HTML Full Course" class="thumb-img" loading="lazy" />
-                <div class="hover-overlay">
-                  <img src="https://img.youtube.com/vi/G3e-cpL7ofc/1.jpg" class="hover-frame f1" alt="" />
-                  <img src="https://img.youtube.com/vi/G3e-cpL7ofc/2.jpg" class="hover-frame f2" alt="" />
-                  <img src="https://img.youtube.com/vi/G3e-cpL7ofc/3.jpg" class="hover-frame f3" alt="" />
-                  <div class="progress-bar"><div class="progress-fill"></div></div>
-                </div>
+                <div class="preview-slot"></div>
                 <span class="duration">4:25:28</span>
               </div>
             </a>
@@ -146,20 +142,17 @@
                 <p class="channel-name">freeCodeCamp.org</p>
                 <p class="video-stats">4.2M views &bull; 3 years ago</p>
               </div>
-              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+              <button class="more-btn" onclick="event.preventDefault();event.stopPropagation();">
+                <span class="material-icons">more_vert</span>
+              </button>
             </div>
           </div>
 
-          <div class="video-card" data-vid="OXGznpKZ_sA">
+          <div class="video-card">
             <a href="https://www.youtube.com/watch?v=OXGznpKZ_sA" target="_blank" class="thumb-link">
-              <div class="thumb-wrap">
+              <div class="thumb-wrap" data-vid="OXGznpKZ_sA">
                 <img src="https://img.youtube.com/vi/OXGznpKZ_sA/mqdefault.jpg" alt="CSS Tutorial Full Course" class="thumb-img" loading="lazy" />
-                <div class="hover-overlay">
-                  <img src="https://img.youtube.com/vi/OXGznpKZ_sA/1.jpg" class="hover-frame f1" alt="" />
-                  <img src="https://img.youtube.com/vi/OXGznpKZ_sA/2.jpg" class="hover-frame f2" alt="" />
-                  <img src="https://img.youtube.com/vi/OXGznpKZ_sA/3.jpg" class="hover-frame f3" alt="" />
-                  <div class="progress-bar"><div class="progress-fill"></div></div>
-                </div>
+                <div class="preview-slot"></div>
                 <span class="duration">11:17:27</span>
               </div>
             </a>
@@ -170,20 +163,17 @@
                 <p class="channel-name">freeCodeCamp.org</p>
                 <p class="video-stats">2.8M views &bull; 2 years ago</p>
               </div>
-              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+              <button class="more-btn" onclick="event.preventDefault();event.stopPropagation();">
+                <span class="material-icons">more_vert</span>
+              </button>
             </div>
           </div>
 
-          <div class="video-card" data-vid="mU6anWqZJcc">
+          <div class="video-card">
             <a href="https://www.youtube.com/watch?v=mU6anWqZJcc" target="_blank" class="thumb-link">
-              <div class="thumb-wrap">
+              <div class="thumb-wrap" data-vid="mU6anWqZJcc">
                 <img src="https://img.youtube.com/vi/mU6anWqZJcc/mqdefault.jpg" alt="HTML CSS Crash Course" class="thumb-img" loading="lazy" />
-                <div class="hover-overlay">
-                  <img src="https://img.youtube.com/vi/mU6anWqZJcc/1.jpg" class="hover-frame f1" alt="" />
-                  <img src="https://img.youtube.com/vi/mU6anWqZJcc/2.jpg" class="hover-frame f2" alt="" />
-                  <img src="https://img.youtube.com/vi/mU6anWqZJcc/3.jpg" class="hover-frame f3" alt="" />
-                  <div class="progress-bar"><div class="progress-fill"></div></div>
-                </div>
+                <div class="preview-slot"></div>
                 <span class="duration">1:25:04</span>
               </div>
             </a>
@@ -194,20 +184,17 @@
                 <p class="channel-name">Traversy Media</p>
                 <p class="video-stats">3.1M views &bull; 4 years ago</p>
               </div>
-              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+              <button class="more-btn" onclick="event.preventDefault();event.stopPropagation();">
+                <span class="material-icons">more_vert</span>
+              </button>
             </div>
           </div>
 
-          <div class="video-card" data-vid="yfoY53QXEnI">
+          <div class="video-card">
             <a href="https://www.youtube.com/watch?v=yfoY53QXEnI" target="_blank" class="thumb-link">
-              <div class="thumb-wrap">
+              <div class="thumb-wrap" data-vid="yfoY53QXEnI">
                 <img src="https://img.youtube.com/vi/yfoY53QXEnI/mqdefault.jpg" alt="CSS Flexbox" class="thumb-img" loading="lazy" />
-                <div class="hover-overlay">
-                  <img src="https://img.youtube.com/vi/yfoY53QXEnI/1.jpg" class="hover-frame f1" alt="" />
-                  <img src="https://img.youtube.com/vi/yfoY53QXEnI/2.jpg" class="hover-frame f2" alt="" />
-                  <img src="https://img.youtube.com/vi/yfoY53QXEnI/3.jpg" class="hover-frame f3" alt="" />
-                  <div class="progress-bar"><div class="progress-fill"></div></div>
-                </div>
+                <div class="preview-slot"></div>
                 <span class="duration">40:42</span>
               </div>
             </a>
@@ -218,21 +205,18 @@
                 <p class="channel-name">Traversy Media</p>
                 <p class="video-stats">1.6M views &bull; 3 years ago</p>
               </div>
-              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+              <button class="more-btn" onclick="event.preventDefault();event.stopPropagation();">
+                <span class="material-icons">more_vert</span>
+              </button>
             </div>
           </div>
 
           <!-- ROW 2 -->
-          <div class="video-card" data-vid="p0bGHP-PXD4">
+          <div class="video-card">
             <a href="https://www.youtube.com/watch?v=p0bGHP-PXD4" target="_blank" class="thumb-link">
-              <div class="thumb-wrap">
+              <div class="thumb-wrap" data-vid="p0bGHP-PXD4">
                 <img src="https://img.youtube.com/vi/p0bGHP-PXD4/mqdefault.jpg" alt="Build Website" class="thumb-img" loading="lazy" />
-                <div class="hover-overlay">
-                  <img src="https://img.youtube.com/vi/p0bGHP-PXD4/1.jpg" class="hover-frame f1" alt="" />
-                  <img src="https://img.youtube.com/vi/p0bGHP-PXD4/2.jpg" class="hover-frame f2" alt="" />
-                  <img src="https://img.youtube.com/vi/p0bGHP-PXD4/3.jpg" class="hover-frame f3" alt="" />
-                  <div class="progress-bar"><div class="progress-fill"></div></div>
-                </div>
+                <div class="preview-slot"></div>
                 <span class="duration">1:04:22</span>
               </div>
             </a>
@@ -243,20 +227,17 @@
                 <p class="channel-name">Kevin Powell</p>
                 <p class="video-stats">890K views &bull; 1 year ago</p>
               </div>
-              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+              <button class="more-btn" onclick="event.preventDefault();event.stopPropagation();">
+                <span class="material-icons">more_vert</span>
+              </button>
             </div>
           </div>
 
-          <div class="video-card" data-vid="D-h8L5hgW-w">
+          <div class="video-card">
             <a href="https://www.youtube.com/watch?v=D-h8L5hgW-w" target="_blank" class="thumb-link">
-              <div class="thumb-wrap">
+              <div class="thumb-wrap" data-vid="D-h8L5hgW-w">
                 <img src="https://img.youtube.com/vi/D-h8L5hgW-w/mqdefault.jpg" alt="CSS Grid" class="thumb-img" loading="lazy" />
-                <div class="hover-overlay">
-                  <img src="https://img.youtube.com/vi/D-h8L5hgW-w/1.jpg" class="hover-frame f1" alt="" />
-                  <img src="https://img.youtube.com/vi/D-h8L5hgW-w/2.jpg" class="hover-frame f2" alt="" />
-                  <img src="https://img.youtube.com/vi/D-h8L5hgW-w/3.jpg" class="hover-frame f3" alt="" />
-                  <div class="progress-bar"><div class="progress-fill"></div></div>
-                </div>
+                <div class="preview-slot"></div>
                 <span class="duration">41:06</span>
               </div>
             </a>
@@ -267,20 +248,17 @@
                 <p class="channel-name">Traversy Media</p>
                 <p class="video-stats">1.2M views &bull; 5 years ago</p>
               </div>
-              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+              <button class="more-btn" onclick="event.preventDefault();event.stopPropagation();">
+                <span class="material-icons">more_vert</span>
+              </button>
             </div>
           </div>
 
-          <div class="video-card" data-vid="Wm6CUkswsNw">
+          <div class="video-card">
             <a href="https://www.youtube.com/watch?v=Wm6CUkswsNw" target="_blank" class="thumb-link">
-              <div class="thumb-wrap">
+              <div class="thumb-wrap" data-vid="Wm6CUkswsNw">
                 <img src="https://img.youtube.com/vi/Wm6CUkswsNw/mqdefault.jpg" alt="Responsive Web Design" class="thumb-img" loading="lazy" />
-                <div class="hover-overlay">
-                  <img src="https://img.youtube.com/vi/Wm6CUkswsNw/1.jpg" class="hover-frame f1" alt="" />
-                  <img src="https://img.youtube.com/vi/Wm6CUkswsNw/2.jpg" class="hover-frame f2" alt="" />
-                  <img src="https://img.youtube.com/vi/Wm6CUkswsNw/3.jpg" class="hover-frame f3" alt="" />
-                  <div class="progress-bar"><div class="progress-fill"></div></div>
-                </div>
+                <div class="preview-slot"></div>
                 <span class="duration">3:21:44</span>
               </div>
             </a>
@@ -291,20 +269,17 @@
                 <p class="channel-name">freeCodeCamp.org</p>
                 <p class="video-stats">2.0M views &bull; 2 years ago</p>
               </div>
-              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+              <button class="more-btn" onclick="event.preventDefault();event.stopPropagation();">
+                <span class="material-icons">more_vert</span>
+              </button>
             </div>
           </div>
 
-          <div class="video-card" data-vid="1Rs2ND1ryYc">
+          <div class="video-card">
             <a href="https://www.youtube.com/watch?v=1Rs2ND1ryYc" target="_blank" class="thumb-link">
-              <div class="thumb-wrap">
+              <div class="thumb-wrap" data-vid="1Rs2ND1ryYc">
                 <img src="https://img.youtube.com/vi/1Rs2ND1ryYc/mqdefault.jpg" alt="CSS Tutorial Beginners" class="thumb-img" loading="lazy" />
-                <div class="hover-overlay">
-                  <img src="https://img.youtube.com/vi/1Rs2ND1ryYc/1.jpg" class="hover-frame f1" alt="" />
-                  <img src="https://img.youtube.com/vi/1Rs2ND1ryYc/2.jpg" class="hover-frame f2" alt="" />
-                  <img src="https://img.youtube.com/vi/1Rs2ND1ryYc/3.jpg" class="hover-frame f3" alt="" />
-                  <div class="progress-bar"><div class="progress-fill"></div></div>
-                </div>
+                <div class="preview-slot"></div>
                 <span class="duration">6:17:09</span>
               </div>
             </a>
@@ -315,21 +290,18 @@
                 <p class="channel-name">Net Ninja</p>
                 <p class="video-stats">1.5M views &bull; 3 years ago</p>
               </div>
-              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+              <button class="more-btn" onclick="event.preventDefault();event.stopPropagation();">
+                <span class="material-icons">more_vert</span>
+              </button>
             </div>
           </div>
 
           <!-- ROW 3 -->
-          <div class="video-card" data-vid="HGTJBPNC-Gw">
+          <div class="video-card">
             <a href="https://www.youtube.com/watch?v=HGTJBPNC-Gw" target="_blank" class="thumb-link">
-              <div class="thumb-wrap">
+              <div class="thumb-wrap" data-vid="HGTJBPNC-Gw">
                 <img src="https://img.youtube.com/vi/HGTJBPNC-Gw/mqdefault.jpg" alt="HTML Forms" class="thumb-img" loading="lazy" />
-                <div class="hover-overlay">
-                  <img src="https://img.youtube.com/vi/HGTJBPNC-Gw/1.jpg" class="hover-frame f1" alt="" />
-                  <img src="https://img.youtube.com/vi/HGTJBPNC-Gw/2.jpg" class="hover-frame f2" alt="" />
-                  <img src="https://img.youtube.com/vi/HGTJBPNC-Gw/3.jpg" class="hover-frame f3" alt="" />
-                  <div class="progress-bar"><div class="progress-fill"></div></div>
-                </div>
+                <div class="preview-slot"></div>
                 <span class="duration">32:16</span>
               </div>
             </a>
@@ -340,20 +312,17 @@
                 <p class="channel-name">Web Dev Simplified</p>
                 <p class="video-stats">720K views &bull; 2 years ago</p>
               </div>
-              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+              <button class="more-btn" onclick="event.preventDefault();event.stopPropagation();">
+                <span class="material-icons">more_vert</span>
+              </button>
             </div>
           </div>
 
-          <div class="video-card" data-vid="srvUrASNj0s">
+          <div class="video-card">
             <a href="https://www.youtube.com/watch?v=srvUrASNj0s" target="_blank" class="thumb-link">
-              <div class="thumb-wrap">
+              <div class="thumb-wrap" data-vid="srvUrASNj0s">
                 <img src="https://img.youtube.com/vi/srvUrASNj0s/mqdefault.jpg" alt="HTML Tables" class="thumb-img" loading="lazy" />
-                <div class="hover-overlay">
-                  <img src="https://img.youtube.com/vi/srvUrASNj0s/1.jpg" class="hover-frame f1" alt="" />
-                  <img src="https://img.youtube.com/vi/srvUrASNj0s/2.jpg" class="hover-frame f2" alt="" />
-                  <img src="https://img.youtube.com/vi/srvUrASNj0s/3.jpg" class="hover-frame f3" alt="" />
-                  <div class="progress-bar"><div class="progress-fill"></div></div>
-                </div>
+                <div class="preview-slot"></div>
                 <span class="duration">20:47</span>
               </div>
             </a>
@@ -364,20 +333,17 @@
                 <p class="channel-name">Dani Krossing</p>
                 <p class="video-stats">310K views &bull; 4 years ago</p>
               </div>
-              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+              <button class="more-btn" onclick="event.preventDefault();event.stopPropagation();">
+                <span class="material-icons">more_vert</span>
+              </button>
             </div>
           </div>
 
-          <div class="video-card" data-vid="bn-DQCifeQQ">
+          <div class="video-card">
             <a href="https://www.youtube.com/watch?v=bn-DQCifeQQ" target="_blank" class="thumb-link">
-              <div class="thumb-wrap">
+              <div class="thumb-wrap" data-vid="bn-DQCifeQQ">
                 <img src="https://img.youtube.com/vi/bn-DQCifeQQ/mqdefault.jpg" alt="CSS Animations" class="thumb-img" loading="lazy" />
-                <div class="hover-overlay">
-                  <img src="https://img.youtube.com/vi/bn-DQCifeQQ/1.jpg" class="hover-frame f1" alt="" />
-                  <img src="https://img.youtube.com/vi/bn-DQCifeQQ/2.jpg" class="hover-frame f2" alt="" />
-                  <img src="https://img.youtube.com/vi/bn-DQCifeQQ/3.jpg" class="hover-frame f3" alt="" />
-                  <div class="progress-bar"><div class="progress-fill"></div></div>
-                </div>
+                <div class="preview-slot"></div>
                 <span class="duration">46:22</span>
               </div>
             </a>
@@ -388,20 +354,17 @@
                 <p class="channel-name">Kevin Powell</p>
                 <p class="video-stats">540K views &bull; 2 years ago</p>
               </div>
-              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+              <button class="more-btn" onclick="event.preventDefault();event.stopPropagation();">
+                <span class="material-icons">more_vert</span>
+              </button>
             </div>
           </div>
 
-          <div class="video-card" data-vid="phWxA89Dy94">
+          <div class="video-card">
             <a href="https://www.youtube.com/watch?v=phWxA89Dy94" target="_blank" class="thumb-link">
-              <div class="thumb-wrap">
+              <div class="thumb-wrap" data-vid="phWxA89Dy94">
                 <img src="https://img.youtube.com/vi/phWxA89Dy94/mqdefault.jpg" alt="Tailwind CSS" class="thumb-img" loading="lazy" />
-                <div class="hover-overlay">
-                  <img src="https://img.youtube.com/vi/phWxA89Dy94/1.jpg" class="hover-frame f1" alt="" />
-                  <img src="https://img.youtube.com/vi/phWxA89Dy94/2.jpg" class="hover-frame f2" alt="" />
-                  <img src="https://img.youtube.com/vi/phWxA89Dy94/3.jpg" class="hover-frame f3" alt="" />
-                  <div class="progress-bar"><div class="progress-fill"></div></div>
-                </div>
+                <div class="preview-slot"></div>
                 <span class="duration">1:12:10</span>
               </div>
             </a>
@@ -412,21 +375,18 @@
                 <p class="channel-name">Traversy Media</p>
                 <p class="video-stats">1.9M views &bull; 3 years ago</p>
               </div>
-              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+              <button class="more-btn" onclick="event.preventDefault();event.stopPropagation();">
+                <span class="material-icons">more_vert</span>
+              </button>
             </div>
           </div>
 
           <!-- ROW 4 -->
-          <div class="video-card" data-vid="pQN-pnXPaVg">
+          <div class="video-card">
             <a href="https://www.youtube.com/watch?v=pQN-pnXPaVg" target="_blank" class="thumb-link">
-              <div class="thumb-wrap">
+              <div class="thumb-wrap" data-vid="pQN-pnXPaVg">
                 <img src="https://img.youtube.com/vi/pQN-pnXPaVg/mqdefault.jpg" alt="HTML Tutorial Beginners" class="thumb-img" loading="lazy" />
-                <div class="hover-overlay">
-                  <img src="https://img.youtube.com/vi/pQN-pnXPaVg/1.jpg" class="hover-frame f1" alt="" />
-                  <img src="https://img.youtube.com/vi/pQN-pnXPaVg/2.jpg" class="hover-frame f2" alt="" />
-                  <img src="https://img.youtube.com/vi/pQN-pnXPaVg/3.jpg" class="hover-frame f3" alt="" />
-                  <div class="progress-bar"><div class="progress-fill"></div></div>
-                </div>
+                <div class="preview-slot"></div>
                 <span class="duration">1:00:41</span>
               </div>
             </a>
@@ -437,20 +397,17 @@
                 <p class="channel-name">Programming with Mosh</p>
                 <p class="video-stats">4.8M views &bull; 5 years ago</p>
               </div>
-              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+              <button class="more-btn" onclick="event.preventDefault();event.stopPropagation();">
+                <span class="material-icons">more_vert</span>
+              </button>
             </div>
           </div>
 
-          <div class="video-card" data-vid="wRNinF7YQqQ">
+          <div class="video-card">
             <a href="https://www.youtube.com/watch?v=wRNinF7YQqQ" target="_blank" class="thumb-link">
-              <div class="thumb-wrap">
+              <div class="thumb-wrap" data-vid="wRNinF7YQqQ">
                 <img src="https://img.youtube.com/vi/wRNinF7YQqQ/mqdefault.jpg" alt="CSS Variables" class="thumb-img" loading="lazy" />
-                <div class="hover-overlay">
-                  <img src="https://img.youtube.com/vi/wRNinF7YQqQ/1.jpg" class="hover-frame f1" alt="" />
-                  <img src="https://img.youtube.com/vi/wRNinF7YQqQ/2.jpg" class="hover-frame f2" alt="" />
-                  <img src="https://img.youtube.com/vi/wRNinF7YQqQ/3.jpg" class="hover-frame f3" alt="" />
-                  <div class="progress-bar"><div class="progress-fill"></div></div>
-                </div>
+                <div class="preview-slot"></div>
                 <span class="duration">18:35</span>
               </div>
             </a>
@@ -461,20 +418,17 @@
                 <p class="channel-name">Kevin Powell</p>
                 <p class="video-stats">405K views &bull; 3 years ago</p>
               </div>
-              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+              <button class="more-btn" onclick="event.preventDefault();event.stopPropagation();">
+                <span class="material-icons">more_vert</span>
+              </button>
             </div>
           </div>
 
-          <div class="video-card" data-vid="jS4aFq5-91M">
+          <div class="video-card">
             <a href="https://www.youtube.com/watch?v=jS4aFq5-91M" target="_blank" class="thumb-link">
-              <div class="thumb-wrap">
+              <div class="thumb-wrap" data-vid="jS4aFq5-91M">
                 <img src="https://img.youtube.com/vi/jS4aFq5-91M/mqdefault.jpg" alt="JavaScript Full Course" class="thumb-img" loading="lazy" />
-                <div class="hover-overlay">
-                  <img src="https://img.youtube.com/vi/jS4aFq5-91M/1.jpg" class="hover-frame f1" alt="" />
-                  <img src="https://img.youtube.com/vi/jS4aFq5-91M/2.jpg" class="hover-frame f2" alt="" />
-                  <img src="https://img.youtube.com/vi/jS4aFq5-91M/3.jpg" class="hover-frame f3" alt="" />
-                  <div class="progress-bar"><div class="progress-fill"></div></div>
-                </div>
+                <div class="preview-slot"></div>
                 <span class="duration">8:11:09</span>
               </div>
             </a>
@@ -485,20 +439,18 @@
                 <p class="channel-name">Bro Code</p>
                 <p class="video-stats">3.6M views &bull; 2 years ago</p>
               </div>
-              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+              <button class="more-btn" onclick="event.preventDefault();event.stopPropagation();">
+                <span class="material-icons">more_vert</span>
+              </button>
             </div>
           </div>
 
-          <div class="video-card" data-vid="EiNiSFIPIQE">
+          <!-- ROW 5 -->
+          <div class="video-card">
             <a href="https://www.youtube.com/watch?v=EiNiSFIPIQE" target="_blank" class="thumb-link">
-              <div class="thumb-wrap">
+              <div class="thumb-wrap" data-vid="EiNiSFIPIQE">
                 <img src="https://img.youtube.com/vi/EiNiSFIPIQE/mqdefault.jpg" alt="CSS Position" class="thumb-img" loading="lazy" />
-                <div class="hover-overlay">
-                  <img src="https://img.youtube.com/vi/EiNiSFIPIQE/1.jpg" class="hover-frame f1" alt="" />
-                  <img src="https://img.youtube.com/vi/EiNiSFIPIQE/2.jpg" class="hover-frame f2" alt="" />
-                  <img src="https://img.youtube.com/vi/EiNiSFIPIQE/3.jpg" class="hover-frame f3" alt="" />
-                  <div class="progress-bar"><div class="progress-fill"></div></div>
-                </div>
+                <div class="preview-slot"></div>
                 <span class="duration">24:58</span>
               </div>
             </a>
@@ -509,21 +461,17 @@
                 <p class="channel-name">Kevin Powell</p>
                 <p class="video-stats">610K views &bull; 4 years ago</p>
               </div>
-              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+              <button class="more-btn" onclick="event.preventDefault();event.stopPropagation();">
+                <span class="material-icons">more_vert</span>
+              </button>
             </div>
           </div>
 
-          <!-- ROW 5 -->
-          <div class="video-card" data-vid="ysEN5RaKOlA">
+          <div class="video-card">
             <a href="https://www.youtube.com/watch?v=ysEN5RaKOlA" target="_blank" class="thumb-link">
-              <div class="thumb-wrap">
+              <div class="thumb-wrap" data-vid="ysEN5RaKOlA">
                 <img src="https://img.youtube.com/vi/ysEN5RaKOlA/mqdefault.jpg" alt="CSS Box Model" class="thumb-img" loading="lazy" />
-                <div class="hover-overlay">
-                  <img src="https://img.youtube.com/vi/ysEN5RaKOlA/1.jpg" class="hover-frame f1" alt="" />
-                  <img src="https://img.youtube.com/vi/ysEN5RaKOlA/2.jpg" class="hover-frame f2" alt="" />
-                  <img src="https://img.youtube.com/vi/ysEN5RaKOlA/3.jpg" class="hover-frame f3" alt="" />
-                  <div class="progress-bar"><div class="progress-fill"></div></div>
-                </div>
+                <div class="preview-slot"></div>
                 <span class="duration">16:30</span>
               </div>
             </a>
@@ -534,20 +482,17 @@
                 <p class="channel-name">Kevin Powell</p>
                 <p class="video-stats">280K views &bull; 3 years ago</p>
               </div>
-              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+              <button class="more-btn" onclick="event.preventDefault();event.stopPropagation();">
+                <span class="material-icons">more_vert</span>
+              </button>
             </div>
           </div>
 
-          <div class="video-card" data-vid="9YffrCViTVk">
+          <div class="video-card">
             <a href="https://www.youtube.com/watch?v=9YffrCViTVk" target="_blank" class="thumb-link">
-              <div class="thumb-wrap">
+              <div class="thumb-wrap" data-vid="9YffrCViTVk">
                 <img src="https://img.youtube.com/vi/9YffrCViTVk/mqdefault.jpg" alt="HTML5 Semantics" class="thumb-img" loading="lazy" />
-                <div class="hover-overlay">
-                  <img src="https://img.youtube.com/vi/9YffrCViTVk/1.jpg" class="hover-frame f1" alt="" />
-                  <img src="https://img.youtube.com/vi/9YffrCViTVk/2.jpg" class="hover-frame f2" alt="" />
-                  <img src="https://img.youtube.com/vi/9YffrCViTVk/3.jpg" class="hover-frame f3" alt="" />
-                  <div class="progress-bar"><div class="progress-fill"></div></div>
-                </div>
+                <div class="preview-slot"></div>
                 <span class="duration">28:14</span>
               </div>
             </a>
@@ -558,20 +503,17 @@
                 <p class="channel-name">Dave Gray</p>
                 <p class="video-stats">195K views &bull; 2 years ago</p>
               </div>
-              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+              <button class="more-btn" onclick="event.preventDefault();event.stopPropagation();">
+                <span class="material-icons">more_vert</span>
+              </button>
             </div>
           </div>
 
-          <div class="video-card" data-vid="ieTHC78giGQ">
+          <div class="video-card">
             <a href="https://www.youtube.com/watch?v=ieTHC78giGQ" target="_blank" class="thumb-link">
-              <div class="thumb-wrap">
+              <div class="thumb-wrap" data-vid="ieTHC78giGQ">
                 <img src="https://img.youtube.com/vi/ieTHC78giGQ/mqdefault.jpg" alt="Bootstrap 5" class="thumb-img" loading="lazy" />
-                <div class="hover-overlay">
-                  <img src="https://img.youtube.com/vi/ieTHC78giGQ/1.jpg" class="hover-frame f1" alt="" />
-                  <img src="https://img.youtube.com/vi/ieTHC78giGQ/2.jpg" class="hover-frame f2" alt="" />
-                  <img src="https://img.youtube.com/vi/ieTHC78giGQ/3.jpg" class="hover-frame f3" alt="" />
-                  <div class="progress-bar"><div class="progress-fill"></div></div>
-                </div>
+                <div class="preview-slot"></div>
                 <span class="duration">2:14:56</span>
               </div>
             </a>
@@ -582,20 +524,17 @@
                 <p class="channel-name">Traversy Media</p>
                 <p class="video-stats">1.1M views &bull; 3 years ago</p>
               </div>
-              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+              <button class="more-btn" onclick="event.preventDefault();event.stopPropagation();">
+                <span class="material-icons">more_vert</span>
+              </button>
             </div>
           </div>
 
-          <div class="video-card" data-vid="3PHXvlpOkf4">
+          <div class="video-card">
             <a href="https://www.youtube.com/watch?v=3PHXvlpOkf4" target="_blank" class="thumb-link">
-              <div class="thumb-wrap">
+              <div class="thumb-wrap" data-vid="3PHXvlpOkf4">
                 <img src="https://img.youtube.com/vi/3PHXvlpOkf4/mqdefault.jpg" alt="HTML CSS Projects" class="thumb-img" loading="lazy" />
-                <div class="hover-overlay">
-                  <img src="https://img.youtube.com/vi/3PHXvlpOkf4/1.jpg" class="hover-frame f1" alt="" />
-                  <img src="https://img.youtube.com/vi/3PHXvlpOkf4/2.jpg" class="hover-frame f2" alt="" />
-                  <img src="https://img.youtube.com/vi/3PHXvlpOkf4/3.jpg" class="hover-frame f3" alt="" />
-                  <div class="progress-bar"><div class="progress-fill"></div></div>
-                </div>
+                <div class="preview-slot"></div>
                 <span class="duration">3:44:28</span>
               </div>
             </a>
@@ -606,13 +545,107 @@
                 <p class="channel-name">Zero To Mastery</p>
                 <p class="video-stats">850K views &bull; 2 years ago</p>
               </div>
-              <button class="more-btn"><span class="material-icons">more_vert</span></button>
+              <button class="more-btn" onclick="event.preventDefault();event.stopPropagation();">
+                <span class="material-icons">more_vert</span>
+              </button>
             </div>
           </div>
 
         </div><!-- end .video-grid -->
       </main>
     </div><!-- end .layout -->
+
+    <!-- ======================================================
+         Hover-to-preview script
+         Strategy: inject a plain <iframe> into .preview-slot on mouseenter,
+         remove it on mouseleave. Setting src directly inside a user-event
+         handler satisfies browser autoplay policy for muted video — works
+         on file://, localhost, and GitHub Pages.
+    ====================================================== -->
+    <script>
+    (function () {
+      'use strict';
+
+      var HOVER_DELAY = 500;   // ms — ignore quick mouse-passes
+      var FADE_MS     = 200;   // crossfade duration
+
+      /* Build the embed URL — muted, no controls, no branding, autoplay */
+      function embedURL(vid) {
+        return 'https://www.youtube-nocookie.com/embed/' + vid +
+          '?autoplay=1&mute=1&controls=0&disablekb=1&fs=0' +
+          '&iv_load_policy=3&modestbranding=1&rel=0&playsinline=1&start=10';
+      }
+
+      function initCards() {
+        document.querySelectorAll('.video-card').forEach(function (card) {
+          var wrap  = card.querySelector('.thumb-wrap');
+          var slot  = card.querySelector('.preview-slot');
+          var img   = card.querySelector('.thumb-img');
+          var vid   = wrap ? wrap.dataset.vid : null;
+          if (!vid || !slot) return;
+
+          var timer  = null;
+          var iframe = null;
+
+          /* ── mouseenter on the whole card ── */
+          card.addEventListener('mouseenter', function () {
+            timer = setTimeout(function () {
+              if (iframe) return; // already injected
+
+              /* Create iframe and inject into slot */
+              iframe = document.createElement('iframe');
+              iframe.src              = embedURL(vid);
+              iframe.title            = 'Video preview';
+              iframe.allow            = 'autoplay; encrypted-media';
+              iframe.allowFullscreen  = false;
+              iframe.setAttribute('aria-hidden', 'true');
+              slot.appendChild(iframe);
+
+              /* Crossfade: slot in, thumbnail out */
+              wrap.classList.add('previewing');
+              slot.style.transition = 'opacity ' + FADE_MS + 'ms ease';
+              img.style.transition  = 'opacity ' + FADE_MS + 'ms ease';
+              /* Small RAF delay so the browser paints the iframe first */
+              requestAnimationFrame(function () {
+                requestAnimationFrame(function () {
+                  slot.style.opacity = '1';
+                  img.style.opacity  = '0';
+                });
+              });
+            }, HOVER_DELAY);
+          });
+
+          /* ── mouseleave on the whole card ── */
+          card.addEventListener('mouseleave', function () {
+            clearTimeout(timer);
+            if (!iframe) return;
+
+            /* Crossfade back */
+            wrap.classList.remove('previewing');
+            slot.style.transition = 'opacity ' + FADE_MS + 'ms ease';
+            img.style.transition  = 'opacity ' + FADE_MS + 'ms ease';
+            slot.style.opacity    = '0';
+            img.style.opacity     = '1';
+
+            /* Remove iframe after fade to stop audio/network */
+            setTimeout(function () {
+              if (iframe && iframe.parentNode) {
+                iframe.parentNode.removeChild(iframe);
+              }
+              iframe = null;
+            }, FADE_MS + 50);
+          });
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCards);
+      } else {
+        initCards();
+      }
+
+    })();
+    </script>
 
   </body>
 </html>
