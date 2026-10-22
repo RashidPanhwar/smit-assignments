@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Shutter</title>
+  <link rel="stylesheet" href="contact.css">
+  <!-- AOS is the scroll animation library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="header-bar" data-aos="fade-left">
+    <a class="logo" href="index.html">Shutter</a>
+
+    <!-- checkbox is used to open the menu on a phone, no extra javascript -->
+    <input type="checkbox" id="nav-check" class="nav-check">
+    <label for="nav-check" class="nav-btn" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <nav class="main-menu">
+      <ul class="menu-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Photos</a></li>
+        <li><a href="#">Bio</a></li>
+        <li><a href="#">Blog</a></li>
+        <li class="active"><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <ul class="social-list">
+        <li><a href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H8v3h2v7h3v-7h3l1-3h-4v-2c0-.6.4-1 1-1z"/></svg>
+        </a></li>
+        <li><a href="#" aria-label="Twitter">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.6 7.3c.5-.3.9-.8 1.1-1.4-.5.3-1 .5-1.6.6A2.7 2.7 0 0 0 14.5 9c0 .2 0 .4.1.6-2.2-.1-4.2-1.2-5.5-2.8-.2.4-.3.8-.3 1.3 0 .9.5 1.8 1.2 2.2-.4 0-.8-.1-1.2-.3v.1c0 1.3.9 2.4 2.2 2.6-.2.1-.5.1-.7.1-.2 0-.3 0-.5-.1.3 1.1 1.3 1.8 2.5 1.9A5.5 5.5 0 0 1 6 16.6 7.7 7.7 0 0 0 10.2 18c5 0 7.8-4.2 7.8-7.8v-.4c.5-.4 1-.9 1.4-1.5z"/></svg>
+        </a></li>
+        <li><a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5zm8 2H8a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3zm-4 3.2A3.8 3.8 0 1 1 8.2 12 3.8 3.8 0 0 1 12 8.2zm0 2A1.8 1.8 0 1 0 13.8 12 1.8 1.8 0 0 0 12 10.2zM17.4 6.9a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/></svg>
+        </a></li>
+        <li><a href="#" aria-label="500px">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9zm0 2.2A6.8 6.8 0 1 1 5.2 12 6.8 6.8 0 0 1 12 5.2zm-1.1 2.4h2.3l2.6 4.4H13.2V17h-2.3z"/></svg>
+        </a></li>
+        <li><a href="#" aria-label="Flickr">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="7.5" cy="12" r="3.2"/><circle cx="16.5" cy="12" r="3.2"/></svg>
+        </a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-content" id="main">
+    <section class="contact-box" data-aos="fade-up">
+      <h1>Contact Me</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur <a href="#">adipisicing</a> elit.
+        Ipsa explicabo quasi cum, laudantium neque at veniam itaque atque
+        <a href="#">necessitatibus</a> temporibus! Beatae sit soluta magni neque
+        autem, suscipit dolorem, quo alias.
+      </p>
+
+      <form action="#" method="post">
+        <div class="name-row">
+          <div class="field">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" autocomplete="given-name" required>
+          </div>
+          <div class="field">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" autocomplete="family-name">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+        </div>
+
+        <div class="field">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject">
+        </div>
+
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="7" placeholder="Write your notes or questions here..." required></textarea>
+        </div>
+
+        <button type="submit" class="send-btn">Send Message</button>
+      </form>
+    </section>
+
+    <footer class="site-footer">
+      <p>Copyright &copy; 2026 All rights reserved | This template is made with <span class="heart">&#9829;</span> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+    </footer>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 700,
+      once: true
+    });
+  </script>
+</body>
+</html>

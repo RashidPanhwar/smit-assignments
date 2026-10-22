@@ -1,0 +1,651 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Build Your Dream | Construction</title>
+  <meta name="description" content="Thoughtful building and renovation, from first sketch to final detail.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+    <symbol id="i-chevron-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+    <symbol id="i-chevron-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></symbol>
+    <symbol id="i-ruler" viewBox="0 0 24 24"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z"/><path d="m14.5 12.5 2-2"/><path d="m11.5 9.5 2-2"/><path d="m8.5 6.5 2-2"/><path d="m17.5 15.5 2-2"/></symbol>
+    <symbol id="i-hammer" viewBox="0 0 24 24"><path d="m15 12-9.373 9.373a1 1 0 0 1-3.001-3L12 9"/><path d="m18 15 4-4"/><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"/></symbol>
+    <symbol id="i-paint-roller" viewBox="0 0 24 24"><rect width="16" height="6" x="2" y="2" rx="2"/><path d="M10 16v-2a2 2 0 0 1 2-2h8a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect width="4" height="6" x="8" y="16" rx="1"/></symbol>
+    <symbol id="i-clipboard-check" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></symbol>
+    <symbol id="i-messages-square" viewBox="0 0 24 24"><path d="M16 10a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 14.286V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/><path d="M20 9a2 2 0 0 1 2 2v10.286a.71.71 0 0 1-1.212.502l-2.202-2.202A2 2 0 0 0 17.172 19H10a2 2 0 0 1-2-2v-1"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></symbol>
+    <symbol id="i-calendar-days" viewBox="0 0 24 24"><path d="M8 2v3"/><path d="M16 2v3"/><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M8 13h.01"/><path d="M12 13h.01"/><path d="M16 13h.01"/><path d="M8 17h.01"/><path d="M12 17h.01"/><path d="M16 17h.01"/></symbol>
+    <symbol id="i-hard-hat" viewBox="0 0 24 24"><path d="M10 10V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/><path d="M14 6a6 6 0 0 1 6 6v3"/><path d="M4 15v-3a6 6 0 0 1 6-6"/><rect x="2" y="15" width="20" height="4" rx="1"/></symbol>
+    <symbol id="i-key-round" viewBox="0 0 24 24"><path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"/><circle cx="16.5" cy="7.5" r=".5" fill="currentColor"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="Construction home">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 0 23 7 16 14 9 7ZM7 9 14 16 7 23 0 16ZM25 9 32 16 25 23 18 16ZM16 18 23 25 16 32 9 25Z" fill="currentColor"/></svg>
+        <span>Construction</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="Open navigation">
+        <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
+      </button>
+      <nav id="site-menu" aria-label="Main navigation">
+        <ul>
+          <li><a href="#home" aria-current="page">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li class="has-menu">
+            <button class="submenu-toggle" type="button" aria-expanded="false" aria-controls="resource-menu">
+              Resources <svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+            </button>
+            <ul id="resource-menu" class="submenu">
+              <li><a href="#services">Renovation</a></li>
+              <li><a href="#approach">Construction guide</a></li>
+              <li><a href="#journal">Journal</a></li>
+              <li><a href="#contact">Project brief</a></li>
+              <li><a href="#features">Components</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="banner-area" id="home">
+      <div class="hero-photo">
+        <img src="https://preview.colorlib.com/theme/construction/img/native/timber-2048.jpg" width="2048" height="3072" alt="" fetchpriority="high">
+      </div>
+      <div class="hero-shade"></div>
+      <div class="container hero-content">
+        <span class="eyebrow">Thoughtful planning. Lasting spaces.</span>
+        <h1>Build Your Dream</h1>
+        <p>From the first sketch to the final detail. Bring your ideas into focus with a practical approach to building and renovation.</p>
+        <a class="button" href="#about">Explore our approach <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+      </div>
+    </section>
+
+    <section class="section features" id="features">
+      <div class="container">
+        <div class="row cards">
+          <div class="col-12 md:col-4">
+            <article class="info-card">
+              <svg class="icon" aria-hidden="true"><use href="#i-ruler"/></svg>
+              <h2>Pre-construction</h2>
+              <p>A clear brief, measured information and an agreed sequence before work begins.</p>
+            </article>
+          </div>
+          <div class="col-12 md:col-4">
+            <article class="info-card">
+              <svg class="icon" aria-hidden="true"><use href="#i-hammer"/></svg>
+              <h2>Building &amp; renovation</h2>
+              <p>Coordinate structure, services and finishes around an achievable scope.</p>
+            </article>
+          </div>
+          <div class="col-12 md:col-4">
+            <article class="info-card">
+              <svg class="icon" aria-hidden="true"><use href="#i-paint-roller"/></svg>
+              <h2>Interior fit-out</h2>
+              <p>Make spaces work harder through thoughtful layouts, practical detailing and careful handover.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-title">
+          <span class="eyebrow">Made for the way you live</span>
+          <h2>Some features that make us unique</h2>
+          <p>A joined-up approach to the practical decisions behind every space.</p>
+        </div>
+        <div class="row cards cards-3" id="services">
+          <div class="col-12 md:col-6 lg:col-4">
+            <article class="service-card">
+              <img src="https://preview.colorlib.com/theme/construction/img/native/planning-1440.jpg" width="1440" height="960" alt="Pre-construction">
+              <div>
+                <h3>Pre-construction</h3>
+                <p>A clear brief, measured information and an agreed sequence before work begins.</p>
+                <a class="text-link" href="#contact">Explore this service <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 md:col-6 lg:col-4">
+            <article class="service-card">
+              <img src="https://preview.colorlib.com/theme/construction/img/native/interior-1440.jpg" width="1440" height="805" alt="Building and renovation">
+              <div>
+                <h3>Building &amp; renovation</h3>
+                <p>Coordinate structure, services and finishes around an achievable scope.</p>
+                <a class="text-link" href="#contact">Explore this service <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 md:col-6 lg:col-4">
+            <article class="service-card">
+              <img src="https://preview.colorlib.com/theme/construction/img/native/tools-1440.jpg" width="1440" height="2160" alt="Interior fit-out">
+              <div>
+                <h3>Interior fit-out</h3>
+                <p>Make spaces work harder through thoughtful layouts, practical detailing and careful handover.</p>
+                <a class="text-link" href="#contact">Explore this service <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-title">
+          <span class="eyebrow">Selected projects</span>
+          <h2>Built with care</h2>
+          <p>Thoughtful spaces, carefully coordinated from the brief to the final detail.</p>
+        </div>
+      </div>
+      <div class="slider project-slider" data-slider data-desktop="4" data-tablet="2" data-mobile="1">
+        <div class="slider-view">
+          <div class="slider-track">
+            <article class="project-card">
+              <a class="photo-link" href="#contact">
+                <img src="https://preview.colorlib.com/theme/construction/img/native/timber-1440.jpg" width="1440" height="2160" alt="Timber connection">
+              </a>
+              <div>
+                <span class="eyebrow">Structures</span>
+                <h3><a href="#contact">Timber connection</a></h3>
+                <p>A sheltered timber walkway brings a garden route together with careful junctions and a simple maintenance plan.</p>
+                <a class="text-link" href="#contact">View project <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+              </div>
+            </article>
+            <article class="project-card">
+              <a class="photo-link" href="#contact">
+                <img src="https://preview.colorlib.com/theme/construction/img/native/workspace-1440.jpg" width="1440" height="960" alt="Shared workspace">
+              </a>
+              <div>
+                <span class="eyebrow">Commercial</span>
+                <h3><a href="#contact">Shared workspace</a></h3>
+                <p>An open workplace fit-out combines flexible desks, quieter meeting areas and practical everyday circulation.</p>
+                <a class="text-link" href="#contact">View project <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+              </div>
+            </article>
+            <article class="project-card">
+              <a class="photo-link" href="#contact">
+                <img src="https://preview.colorlib.com/theme/construction/img/native/interior-1440.jpg" width="1440" height="805" alt="Workshop renewal">
+              </a>
+              <div>
+                <span class="eyebrow">Renovation</span>
+                <h3><a href="#contact">Workshop renewal</a></h3>
+                <p>A phased workshop renovation gives an existing shell a clearer layout and a practical route to its next chapter.</p>
+                <a class="text-link" href="#contact">View project <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+              </div>
+            </article>
+            <article class="project-card">
+              <a class="photo-link" href="#contact">
+                <img src="https://preview.colorlib.com/theme/construction/img/native/room-1440.jpg" width="1440" height="960" alt="Bright room with a large window and timber floor">
+              </a>
+              <div>
+                <span class="eyebrow">Residential</span>
+                <h3><a href="#contact">Room to grow</a></h3>
+                <p>A bright residential renovation creates a flexible room with durable finishes and room for everyday life.</p>
+                <a class="text-link" href="#contact">View project <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="slider-nav">
+          <button class="slider-prev" type="button" aria-label="Previous projects">
+            <svg class="icon" aria-hidden="true"><use href="#i-chevron-left"/></svg>
+          </button>
+          <button class="slider-next" type="button" aria-label="Next projects">
+            <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"/></svg>
+          </button>
+        </div>
+        <div class="slider-dots"></div>
+      </div>
+    </section>
+
+    <section class="section gold-band">
+      <div class="container">
+        <div class="row milestones">
+          <div class="col-6 md:col">
+            <strong class="counter" data-count="42">42</strong>
+            <span>Projects completed</span>
+          </div>
+          <div class="col-6 md:col">
+            <strong class="counter" data-count="18">18</strong>
+            <span>Years of experience</span>
+          </div>
+          <div class="col-6 md:col">
+            <strong class="counter" data-count="12">12</strong>
+            <span>Specialist partners</span>
+          </div>
+          <div class="col-6 md:col">
+            <strong class="counter" data-count="4">4</strong>
+            <span>Service disciplines</span>
+          </div>
+          <div class="col-12 md:col">
+            <strong class="counter" data-count="1">1</strong>
+            <span>Dedicated coordinator</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="approach">
+      <div class="container">
+        <div class="section-title">
+          <span class="eyebrow">Details that matter</span>
+          <h2>Why choose a considered approach?</h2>
+          <p>The best results are built from small decisions made at the right time.</p>
+        </div>
+        <div class="row cards cards-3">
+          <div class="col-12 md:col-6 lg:col-4">
+            <article class="info-card">
+              <svg class="icon" aria-hidden="true"><use href="#i-clipboard-check"/></svg>
+              <h3>Clear scope</h3>
+              <p>Keep drawings, responsibilities and exclusions together so everyone can work from the same information.</p>
+            </article>
+          </div>
+          <div class="col-12 md:col-6 lg:col-4">
+            <article class="info-card">
+              <svg class="icon" aria-hidden="true"><use href="#i-messages-square"/></svg>
+              <h3>Open communication</h3>
+              <p>Agree who makes decisions, when information is needed and how changes are recorded.</p>
+            </article>
+          </div>
+          <div class="col-12 md:col-6 lg:col-4">
+            <article class="info-card">
+              <svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg>
+              <h3>Practical detailing</h3>
+              <p>Think about access, maintenance, junctions and how materials will perform in everyday use.</p>
+            </article>
+          </div>
+          <div class="col-12 md:col-6 lg:col-4">
+            <article class="info-card">
+              <svg class="icon" aria-hidden="true"><use href="#i-calendar-days"/></svg>
+              <h3>Realistic sequencing</h3>
+              <p>Allow time for surveys, approvals, procurement and work that needs to happen in order.</p>
+            </article>
+          </div>
+          <div class="col-12 md:col-6 lg:col-4">
+            <article class="info-card">
+              <svg class="icon" aria-hidden="true"><use href="#i-hard-hat"/></svg>
+              <h3>A cared-for site</h3>
+              <p>Discuss site access, separation from occupied areas and the daily routines that protect people.</p>
+            </article>
+          </div>
+          <div class="col-12 md:col-6 lg:col-4">
+            <article class="info-card">
+              <svg class="icon" aria-hidden="true"><use href="#i-key-round"/></svg>
+              <h3>A useful handover</h3>
+              <p>Collect operating information, finish schedules and a clear route for reporting outstanding items.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-band" id="stories">
+      <div class="container">
+        <div class="section-title">
+          <span class="eyebrow">Customer stories</span>
+          <h2>What our clients say</h2>
+          <p>Clear communication and care in the details make all the difference.</p>
+        </div>
+        <div class="slider story-slider" data-slider data-desktop="2" data-tablet="2" data-mobile="1">
+          <div class="slider-view">
+            <div class="slider-track">
+              <article class="principle">
+                <blockquote>
+                  <p>“From the first conversation, the team helped us put the important decisions in order. The finished walkway feels like a natural part of our garden.”</p>
+                  <footer>
+                    <strong>Avery Collins</strong>
+                    <span>Homeowner · Westmere</span>
+                  </footer>
+                </blockquote>
+              </article>
+              <article class="principle">
+                <blockquote>
+                  <p>“We always knew what was happening next. The layout works for quiet days as well as busy ones, and the handover information was easy to follow.”</p>
+                  <footer>
+                    <strong>Ellis Morgan</strong>
+                    <span>Workspace client · Alderfield</span>
+                  </footer>
+                </blockquote>
+              </article>
+              <article class="principle">
+                <blockquote>
+                  <p>“The attention to the existing building gave us confidence. Questions were raised early, the work stayed organised and the small details were treated with care.”</p>
+                  <footer>
+                    <strong>Rowan Blake</strong>
+                    <span>Renovation client · Millford</span>
+                  </footer>
+                </blockquote>
+              </article>
+            </div>
+          </div>
+          <div class="slider-nav">
+            <button class="slider-prev" type="button" aria-label="Previous stories">
+              <svg class="icon" aria-hidden="true"><use href="#i-chevron-left"/></svg>
+            </button>
+            <button class="slider-next" type="button" aria-label="Next stories">
+              <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"/></svg>
+            </button>
+          </div>
+          <div class="slider-dots"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="journal">
+      <div class="container">
+        <div class="section-title">
+          <span class="eyebrow">From the journal</span>
+          <h2>Notes before you build</h2>
+          <p>Straightforward reading for the decisions ahead.</p>
+        </div>
+        <div class="row cards cards-3">
+          <div class="col-12 md:col-6 lg:col-4">
+            <article class="journal-card">
+              <img src="https://preview.colorlib.com/theme/construction/img/native/tools-1440.jpg" width="1440" height="2160" alt="Write a brief that leaves room for ideas">
+              <span class="eyebrow">Planning</span>
+              <h3><a href="#contact">Write a brief that leaves room for ideas</a></h3>
+              <p>Turn everyday frustrations into a useful design conversation.</p>
+            </article>
+          </div>
+          <div class="col-12 md:col-6 lg:col-4">
+            <article class="journal-card">
+              <img src="https://preview.colorlib.com/theme/construction/img/native/interior-1440.jpg" width="1440" height="805" alt="Plan the work around daily life">
+              <span class="eyebrow">Renovation</span>
+              <h3><a href="#contact">Plan the work around daily life</a></h3>
+              <p>Consider noise, access and temporary arrangements before work starts.</p>
+            </article>
+          </div>
+          <div class="col-12 md:col-6 lg:col-4">
+            <article class="journal-card">
+              <img src="https://preview.colorlib.com/theme/construction/img/native/planning-1440.jpg" width="1440" height="960" alt="Make handover more than a key exchange">
+              <span class="eyebrow">Care</span>
+              <h3><a href="#contact">Make handover more than a key exchange</a></h3>
+              <p>Collect information that makes the space easier to look after.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-title">
+          <span class="eyebrow">Start with a conversation</span>
+          <h2>If you need, just drop us a line</h2>
+          <p>Share what you want to change and where you are in the process.</p>
+        </div>
+        <div class="form-wrap">
+          <form class="enquiry-form" action="#" method="post">
+            <div class="row g-4">
+              <div class="col-12 md:col-6">
+                <label class="form-label">Name
+                  <input class="form-control" name="name" autocomplete="name" required maxlength="120">
+                </label>
+              </div>
+              <div class="col-12 md:col-6">
+                <label class="form-label">Email
+                  <input class="form-control" name="email" type="email" autocomplete="email" required maxlength="180">
+                </label>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Subject
+                  <input class="form-control" name="subject" required maxlength="180" value="Project enquiry">
+                </label>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Tell us about your project
+                  <textarea class="form-control" name="message" rows="6" required maxlength="5000"></textarea>
+                </label>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Project brief (optional)
+                  <textarea class="form-control" name="brief" rows="5" maxlength="5000" placeholder="Paste your saved brief here"></textarea>
+                </label>
+              </div>
+            </div>
+            <div class="hp-field" aria-hidden="true">
+              <label>Leave empty<input name="company_website" tabindex="-1" autocomplete="off"></label>
+            </div>
+            <button class="button" type="submit">Send enquiry</button>
+            <div class="form-status" role="status"></div>
+            <p class="small">This demonstration needs a configured mail service before messages can be delivered.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row footer-grid">
+        <div class="col-12 md:col-5">
+          <a class="brand" href="#home">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 0 23 7 16 14 9 7ZM7 9 14 16 7 23 0 16ZM25 9 32 16 25 23 18 16ZM16 18 23 25 16 32 9 25Z" fill="currentColor"/></svg>
+            <span>Construction</span>
+          </a>
+          <p>Good buildings begin with good conversations. Explore a considered approach to planning, making and caring for spaces.</p>
+        </div>
+        <div class="col-12 md:col-3">
+          <h2>Explore</h2>
+          <a href="#services">Our services</a>
+          <a href="#projects">Selected projects</a>
+          <a href="#approach">How we work</a>
+        </div>
+        <div class="col-12 md:col-4">
+          <h2>Plan your project</h2>
+          <a href="#contact">Create a brief</a>
+          <a href="#journal">Before you build</a>
+          <a href="#contact">Make an enquiry</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> Construction. Template by <a href="https://colorlib.com" target="_blank" rel="noopener">Colorlib</a>.</p>
+        <a href="https://colorlib.com" target="_blank" rel="noopener">Documentation</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+  <script>
+    var header = document.querySelector(".site-header");
+    var menuButton = document.querySelector(".menu-toggle");
+    var menu = document.querySelector("#site-menu");
+    var subButton = document.querySelector(".submenu-toggle");
+    var subMenu = document.querySelector("#resource-menu");
+    var year = document.querySelector("#year");
+
+    if (year) {
+      year.textContent = new Date().getFullYear();
+    }
+
+    function closeMenu() {
+      menu.classList.remove("is-open");
+      menuButton.setAttribute("aria-expanded", "false");
+      menuButton.setAttribute("aria-label", "Open navigation");
+      subMenu.classList.remove("is-open");
+      subButton.setAttribute("aria-expanded", "false");
+    }
+
+    window.addEventListener("scroll", function () {
+      header.classList.toggle("is-scrolled", window.scrollY > 50);
+    });
+
+    menuButton.addEventListener("click", function () {
+      var open = menu.classList.toggle("is-open");
+      menuButton.setAttribute("aria-expanded", open ? "true" : "false");
+      menuButton.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+      if (!open) {
+        subMenu.classList.remove("is-open");
+        subButton.setAttribute("aria-expanded", "false");
+      }
+    });
+
+    subButton.addEventListener("click", function () {
+      if (window.innerWidth > 1100) {
+        return;
+      }
+      var open = subMenu.classList.toggle("is-open");
+      subButton.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+
+    document.addEventListener("click", function (event) {
+      if (!header.contains(event.target)) {
+        closeMenu();
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        closeMenu();
+      }
+    });
+
+    menu.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", closeMenu);
+    });
+
+    var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var counters = document.querySelectorAll(".counter");
+
+    function runCounter(item) {
+      var target = Number(item.getAttribute("data-count"));
+      var duration = 2000;
+      var start = performance.now();
+
+      function frame(now) {
+        var progress = Math.min(1, (now - start) / duration);
+        var eased = 1 - Math.pow(2, -10 * progress);
+        item.textContent = Math.round(target * (progress === 1 ? 1 : eased));
+        if (progress < 1) {
+          requestAnimationFrame(frame);
+        }
+      }
+
+      item.textContent = "0";
+      requestAnimationFrame(frame);
+    }
+
+    if (!reduceMotion && "IntersectionObserver" in window) {
+      var seen = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            runCounter(entry.target);
+            seen.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.6 });
+
+      counters.forEach(function (item) {
+        seen.observe(item);
+      });
+    }
+
+    document.querySelectorAll("[data-slider]").forEach(function (slider) {
+      var track = slider.querySelector(".slider-track");
+      var view = slider.querySelector(".slider-view");
+      var cards = track.children;
+      var prev = slider.querySelector(".slider-prev");
+      var next = slider.querySelector(".slider-next");
+      var dots = slider.querySelector(".slider-dots");
+      var index = 0;
+      var startX = 0;
+
+      function visibleCount() {
+        var width = window.innerWidth;
+        if (width >= 1281) {
+          return Number(slider.getAttribute("data-desktop"));
+        }
+        if (width >= 768) {
+          return Number(slider.getAttribute("data-tablet"));
+        }
+        return Number(slider.getAttribute("data-mobile"));
+      }
+
+      function paintDots(pages) {
+        dots.innerHTML = "";
+        for (var i = 0; i < pages; i++) {
+          var button = document.createElement("button");
+          var mark = document.createElement("span");
+          button.type = "button";
+          button.className = "slider-dot" + (i === index ? " active" : "");
+          button.setAttribute("aria-label", "Go to slide " + (i + 1));
+          button.appendChild(mark);
+          button.addEventListener("click", function () {
+            var label = this.getAttribute("aria-label").replace("Go to slide ", "");
+            move(Number(label) - 1);
+          });
+          dots.appendChild(button);
+        }
+      }
+
+      function move(nextIndex) {
+        var gap = parseFloat(getComputedStyle(track).gap) || 0;
+        var visible = visibleCount();
+        var maxIndex = Math.max(0, cards.length - visible);
+        var cardWidth = (view.clientWidth - gap * (visible - 1)) / visible;
+
+        index = Math.max(0, Math.min(nextIndex, maxIndex));
+        Array.prototype.forEach.call(cards, function (card) {
+          card.style.flexBasis = cardWidth + "px";
+        });
+        track.style.transform = "translateX(-" + (index * (cardWidth + gap)) + "px)";
+        prev.disabled = index === 0;
+        next.disabled = index === maxIndex;
+        paintDots(maxIndex + 1);
+      }
+
+      prev.addEventListener("click", function () {
+        move(index - 1);
+      });
+      next.addEventListener("click", function () {
+        move(index + 1);
+      });
+      view.addEventListener("touchstart", function (event) {
+        startX = event.touches[0].clientX;
+      }, { passive: true });
+      view.addEventListener("touchend", function (event) {
+        var diff = event.changedTouches[0].clientX - startX;
+        if (diff > 40) {
+          move(index - 1);
+        }
+        if (diff < -40) {
+          move(index + 1);
+        }
+      });
+      window.addEventListener("resize", function () {
+        move(index);
+      });
+      move(0);
+    });
+
+    document.querySelector(".enquiry-form").addEventListener("submit", function (event) {
+      event.preventDefault();
+      var status = document.querySelector(".form-status");
+      if (this.company_website && this.company_website.value) {
+        return;
+      }
+      status.textContent = "This demonstration needs a configured mail service before messages can be delivered.";
+    });
+  </script>
+</body>
+</html>
